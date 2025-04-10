@@ -1,0 +1,64 @@
+.belgrano-info {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #f9f9ff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .belgrano-info h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-left: 6px solid #3498db;
+    padding-left: 12px;
+  }
+  
+  .belgrano-info h2 {
+    color: #3498db;
+    margin-top: 30px;
+  }
+  
+  .belgrano-info h3 {
+    color: #5d6d7e;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  .belgrano-info .fecha {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .belgrano-info .intro {
+    background: #ecf5ff;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .belgrano-info ul {
+    padding-left: 20px;
+    list-style: disc;
+    margin-top: 10px;
+  }
+  
+  .belgrano-info ul li {
+    margin-bottom: 6px;
+  }
+  
+  .belgrano-info a {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
+  .belgrano-info a:hover {
+    text-decoration: none;
+    color: #1f618d;
+  }
+  

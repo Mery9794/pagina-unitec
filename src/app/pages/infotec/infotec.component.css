@@ -1,0 +1,102 @@
+.lab-banner {
+  background: linear-gradient(135deg, #013369, #015ea1);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.lab-banner h1 {
+  margin: 0;
+  font-size: 3rem;
+} 
+
+.lab-banner p {
+  font-size: 1.2rem;
+}
+
+.lab-profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh; /* ocupa el alto completo de la pantalla */
+  width: 100vw;  /* ocupa el ancho completo */
+  padding: 40px;
+  gap: 30px;
+  background: linear-gradient(to right, #f5f9ff, #eaf2fb); /* fondo suave */
+  box-sizing: border-box;
+}
+
+.lab-left, .lab-right {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.lab-left {
+  flex: 1; /* Esto representa 1/4 cuando el derecho es 3 */
+  max-width: 25%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.lab-right {
+  flex: 3; /* Esto representa 3/4 */
+  max-width: 75%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+.lab-logo {
+  max-width: 200px;
+  margin-bottom: 25px;
+}
+
+
+.lab-names h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.lab-names h4 {
+  color: #3498db;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.lab-names p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.vertical-divider {
+  width: 2px;
+  background-color: #d1d1d1;
+}
+
+
+.lab-right h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.lab-right h3 {
+  color: #3498db;
+  margin-top: 25px;
+}
+
+.lab-right p {
+  color: #444;
+  line-height: 1.6;
+  font-size: 1rem;
+}

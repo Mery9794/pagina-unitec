@@ -1,0 +1,24 @@
+<section class="hero-carousel">
+  <div class="carousel-container">
+    <a *ngFor="let slide of slides; let i = index" [routerLink]="slide.ruta" class="carousel-slide"
+      [class.active]="i === currentSlide">
+      <div class="slide-bg" [ngStyle]="{ 'background-image': 'url(' + slide.imagen + ')' }"
+        [ngClass]="{ 'filtered': i === 0 }"></div>
+
+      <div class="carousel-caption">
+        <h2>{{ slide.titulo }}</h2>
+        <p *ngIf="slide.descripcion">{{ slide.descripcion }}</p>
+      </div>
+    </a>
+
+    <div class="carousel-controls">
+      <button (click)="anteriorSlide()">‹</button>
+      <button (click)="siguienteSlide()">›</button>
+    </div>
+
+    <div class="carousel-indicators">
+      <span *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide" (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+</section>
