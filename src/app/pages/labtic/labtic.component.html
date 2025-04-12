@@ -1,23 +1,20 @@
 <section class="lab-banner">
-  <h1>LABTIC</h1>
-  <p>Laboratorio de Tecnologías de la Información y la Comunicación</p>
+  <h1>{{ lab.nombre }}</h1>
+  <p>{{ lab.descripcion }}</p>
 </section>
 
 <section class="lab-profile-section">
   <div class="lab-left">
-    <img src="assets/logos/logo-labtic.jpg" alt="Logo LABTIC" class="lab-logo" />
+    <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-logo" />
 
     <div class="lab-names">
       <h3>Integrantes</h3>
 
       <h4>Supervisores</h4>
-      <p>Ing. Marcelo Fernández</p>
-      <p>Lic. José Alberto Ferreyra</p>
+      <p *ngFor="let supervisor of lab.supervisores">{{ supervisor }}</p>
 
       <h4>Colaboradores</h4>
-      <p>Juan Marcos Malanga</p>
-      <p>Simón López</p>
-      <p>Valentín Atanasof</p>
+      <p *ngFor="let colaborador of lab.colaboradores">{{ colaborador }}</p>
     </div>
   </div>
 
@@ -25,18 +22,20 @@
 
   <div class="lab-right">
     <h2>¿Qué hacemos?</h2>
-    <p>
-      Nos enfocamos en la adaptación de computadoras reacondicionadas por el laboratorio LATE,
-      incorporando software diseñado especialmente por nuestro equipo o herramientas asistivas como
-      lectores de pantalla, teclados virtuales, magnificadores, sintetizadores de voz, mouses ópticos y
-      otros recursos que facilitan la accesibilidad.
-    </p>
+    <p>{{ lab.queHacemos }}</p>
 
     <h3>Objetivo principal</h3>
-    <p>
-      Promover la inclusión digital mediante la adecuación tecnológica de equipos, brindando soluciones
-      personalizadas que permiten a más personas acceder y utilizar dispositivos informáticos de manera
-      autónoma.
-    </p>
+    <p>{{ lab.objetivo }}</p>
   </div>
 </section>
+
+<section class="lab-gallery">
+  <h2>Galería de actividades</h2>
+  <div class="gallery-grid">
+    <div *ngFor="let item of galeria" class="gallery-item">
+      <img [src]="item.imagen" [alt]="item.descripcion" />
+      <p>{{ item.descripcion }}</p>
+    </div>
+  </div>
+</section>
+

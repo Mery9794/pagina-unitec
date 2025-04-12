@@ -1,8 +1,15 @@
 .footer {
-  background-color: #222;
-  color: #fff;
+  background-color: #e0e0e0;
+  color: #111;
   padding: 2rem;
   font-size: 0.9rem;
+}
+
+.footer-title { 
+  margin: 0;
+  font-size: 2rem;
+  color: #757575;
+
 }
 
 .footer-content {
@@ -27,16 +34,9 @@
   flex: 1;
 }
 
-.footer-title {
-  margin: 0;
-  font-size: 2rem;
-  color: #ccc;
-
-}
-
 .footer-description {
   margin: 0.3rem 0 0.7rem;
-  color: #aaa;
+  color: #757575;
   margin-right: 300px;
 }
 
