@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 
 @Component({
   selector: 'app-adaptaciones3d',
   standalone: true,
   templateUrl: './adaptaciones3d.component.html',
   styleUrls: ['./adaptaciones3d.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, SectoresComponent]
 })
 export class Adaptaciones3dComponent {
   lab = {
@@ -29,10 +30,12 @@ export class Adaptaciones3dComponent {
       inclusión y respondiendo a las necesidades de otros espacios de extensión a través del desarrollo
       de piezas personalizadas impresas en 3D.`
   };
-  galeria = [
-    { imagen: 'assets/img/lab1.jpg', descripcion: 'Estudiantes en práctica' },
-    { imagen: 'assets/img/lab2.jpg', descripcion: 'Charlas de programación' },
-    { imagen: 'assets/img/lab3.jpg', descripcion: 'Instalación de redes' },
-    { imagen: 'assets/img/lab4.jpg', descripcion: 'Trabajo en equipo' }
+  galeriaAdaptaciones3d = [
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' }
   ];
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

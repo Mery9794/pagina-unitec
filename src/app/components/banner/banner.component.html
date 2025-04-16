@@ -1,4 +1,5 @@
-<section class="hero-carousel">
+<section class="hero-carousel full-width">
+
   <div class="carousel-container">
     <a *ngFor="let slide of slides; let i = index" [routerLink]="slide.ruta" class="carousel-slide"
       [class.active]="i === currentSlide">

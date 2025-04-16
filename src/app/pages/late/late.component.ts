@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 
 @Component({
   selector: 'app-late',
   standalone: true,
   templateUrl: './late.component.html',
   styleUrls: ['./late.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, SectoresComponent]
 })
 export class LateComponent {
   lab = {
@@ -29,10 +30,12 @@ export class LateComponent {
        organismos, instituciones y personas que lo necesiten, promoviendo la inclusión digital y el 
        acceso a la tecnología.`
   };
-  galeria = [
-    { imagen: 'assets/img/lab1.jpg', descripcion: 'Estudiantes en práctica' },
-    { imagen: 'assets/img/lab2.jpg', descripcion: 'Charlas de programación' },
-    { imagen: 'assets/img/lab3.jpg', descripcion: 'Instalación de redes' },
-    { imagen: 'assets/img/lab4.jpg', descripcion: 'Trabajo en equipo' }
+  galeriaLate = [
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' }
   ];
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

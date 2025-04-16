@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 
 @Component({
   selector: 'app-infotec',
   standalone: true,
   templateUrl: './infotec.component.html',
   styleUrls: ['./infotec.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, SectoresComponent]
 })
 export class InfotecComponent {
   lab = {
@@ -30,10 +31,12 @@ export class InfotecComponent {
     habilidades prácticas desde un nivel inicial. Además, buscamos prepararlos para su futura formación
     universitaria en carreras vinculadas a sistemas y tecnologías de la información.`
   };
-  galeria = [
-    { imagen: 'assets/img/lab1.jpg', descripcion: 'Estudiantes en práctica' },
-    { imagen: 'assets/img/lab2.jpg', descripcion: 'Charlas de programación' },
-    { imagen: 'assets/img/lab3.jpg', descripcion: 'Instalación de redes' },
-    { imagen: 'assets/img/lab4.jpg', descripcion: 'Trabajo en equipo' }
+  galeriaInfoTec = [
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' }
   ];
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

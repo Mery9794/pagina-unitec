@@ -1,21 +1,26 @@
-<section id="sectores" class="noticias">
-    <div class="noticias-container">
-      <div class="card2">
-        <h2>Noticias del Laboratorio</h2>
-  
-        <!-- Contenedor scroll -->
-        <div class="noticias-scroll">
-          <div *ngFor="let noticia of noticias" class="noticia-card">
-            <img [src]="noticia.imagenUrl" alt="Imagen noticia" />
-            <div class="contenido">
-              <h3>{{ noticia.titulo }}</h3>
-              <p class="resumen">{{ noticia.resumen }}</p>
-              <p class="fecha">{{ noticia.fecha | date: 'longDate' }}</p>
-              <button>Ver más</button>
-            </div>
+<section class="noticias" id="noticias">
+  <div class="noticias-container">
+    <h2 class="h2">Novedades</h2>
+    <div class="lab-grid">
+      <div *ngFor="let noticia of noticias" class="noticia-card">
+        <h3 class="titulo-noticia">{{ noticia.titulo }}</h3>
+
+        <img [src]="noticia.imagenUrl" alt="Imagen de la noticia" />
+
+        <div class="contenido">
+          <p class="info-noticia">
+            <span class="noticia-fecha">{{ noticia.fecha | date: 'd MMM y' }}</span>
+            &nbsp;|&nbsp;
+            <span class="noticia-resumen">{{ noticia.resumen }}</span>
+          </p>
+          
+          <div class="btn-container">
+            <a [href]="noticia.linkFacebook" target="_blank">
+              <button class="btn-ver-mas">Ver más</button>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

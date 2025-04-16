@@ -29,13 +29,5 @@
   </div>
 </section>
 
-<section class="lab-gallery">
-  <h2>Galería de actividades</h2>
-  <div class="gallery-grid">
-    <div *ngFor="let item of galeria" class="gallery-item">
-      <img [src]="item.imagen" [alt]="item.descripcion" />
-      <p>{{ item.descripcion }}</p>
-    </div>
-  </div>
-</section>
+<app-sectores [galeria]="galeriaInfoTec"></app-sectores>
 

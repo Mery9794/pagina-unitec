@@ -9,27 +9,30 @@ import { Noticia } from '../../models/noticia';import { CommonModule } from '@an
   styleUrls: ['./laboratorio.component.css']
 })
 export class LaboratorioComponent implements OnInit {
-  noticias: Noticia[] = [];
+  noticias: (Noticia & { mostrarContenido?: boolean })[] = [];
 
   ngOnInit(): void {
-    // Datos simulados
     this.noticias = [
       {
         id: '1',
-        titulo: ' ',
-        resumen: ' ',
-        contenido: ' ',
-        fecha: new Date('2024-03-15'),
-        imagenUrl: ' '
+        titulo: 'Entrega de PC',
+        resumen: 'El Sábado 8/7 entregamos una PC adaptada a ...',
+        fecha: new Date('2023-07-08'),
+        imagenUrl: 'assets/news/noticia1.jpg',
+        linkFacebook: 'https://www.facebook.com/',
       },
       {
         id: '2',
-        titulo: ' ',
-        resumen: ' ',
-        contenido: ' ',
-        fecha: new Date('2024-06-20'),
-        imagenUrl: ' '
+        titulo: 'Visita de la EET N° 2 de Berisso',
+        resumen: 'Hoy recibimos a los alumnos de la EET N° 2 de Berisso ...',
+        fecha: new Date('2022-05-17'),
+        imagenUrl: 'assets/news/noticia2.jpg',
+        linkFacebook: 'https://www.facebook.com/',
       }
     ];
+  }    
+
+  toggleContenido(noticia: any) {
+    noticia.mostrarContenido = !noticia.mostrarContenido;
   }
 }

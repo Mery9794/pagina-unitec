@@ -29,35 +29,7 @@
   </div>
 </section>
 
-<section class="lab-gallery">
-  <h2>Galería de actividades</h2>
-  <div class="gallery-grid">
-    <div *ngFor="let item of galeria; let i = index" class="gallery-item" (click)="abrirVisor(i)">
-      <ng-container *ngIf="esVideo(item.imagen); else imagenTemplate">
-        <video [src]="item.imagen" muted autoplay loop class="gallery-video"></video>
-      </ng-container>
-      <ng-template #imagenTemplate>
-        <img [src]="item.imagen" [alt]="item.descripcion" />
-      </ng-template>
-      <p>{{ item.descripcion }}</p>
-    </div>
-  </div>
-</section>
+<app-sectores [galeria]="galeriaMecatronica"></app-sectores>
 
-<!-- Visor modal -->
-<div class="visor-overlay" *ngIf="visorAbierto" (click)="cerrarVisor()">
-  <div class="visor-contenido" (click)="$event.stopPropagation()">
-    <button class="nav-btn" (click)="anterior($event)">‹</button>
-
-    <ng-container *ngIf="esVideo(galeria[visorIndice].imagen); else imgFull">
-      <video [src]="galeria[visorIndice].imagen" controls autoplay></video>
-    </ng-container>
-    <ng-template #imgFull>
-      <img [src]="galeria[visorIndice].imagen" />
-    </ng-template>
-
-    <button class="nav-btn" (click)="siguiente($event)">›</button>
-  </div>
-</div>
 
 

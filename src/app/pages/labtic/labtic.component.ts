@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 
 @Component({
   selector: 'app-labtic',
   standalone: true,
   templateUrl: './labtic.component.html',
   styleUrls: ['./labtic.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, SectoresComponent]
 })
 export class LabticComponent {
   lab = {
@@ -32,10 +33,13 @@ export class LabticComponent {
       personalizadas que permiten a más personas acceder y utilizar dispositivos informáticos de manera
       autónoma.`
   };
-  galeria = [
-    { imagen: 'assets/img/lab1.jpg', descripcion: 'Estudiantes en práctica' },
-    { imagen: 'assets/img/lab2.jpg', descripcion: 'Charlas de programación' },
-    { imagen: 'assets/img/lab3.jpg', descripcion: 'Instalación de redes' },
-    { imagen: 'assets/img/lab4.jpg', descripcion: 'Trabajo en equipo' }
+  galeriaLabtic = [
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' },
+    { imagen: 'assets/img/', descripcion: '' }
   ];
+  
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

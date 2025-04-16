@@ -5,10 +5,11 @@
     <div class="logo-container">
       <a href="#inicio"><img src="assets/logos/logo-unitec.jpg" alt="Logo Unitec" /></a>
       <div class="logo-text">
-        <span>UNiTEC</span>
-        <p>Unidad de Investigación y Transferencia en Educación en Ingeniería</p>
+        <h2>UNiTEC</h2>
+        <p>Unidad de Investigación, Desarrollo, Extensión y Transferencia para la Calidad de la
+           Educación en Ingeniería con orientación al uso de TIC</p>
       </div>
-    </div>
+    </div>    
 
     <button class="mobile-toggle" (click)="toggleMenu()">☰</button>
 
@@ -16,7 +17,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#sectores">Sectores</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#novedades">Novedades</a>
     </nav>
 
     <nav class="nav-links mobile" [class.show]="menuAbierto">
@@ -24,7 +25,7 @@
       <a href="#inicio" (click)="toggleMenu()">Inicio</a>
       <a href="#nosotros" (click)="toggleMenu()">Nosotros</a>
       <a href="#sectores" (click)="toggleMenu()">Sectores</a>
-      <a href="#contacto" (click)="toggleMenu()">Contacto</a>
+      <a href="#novedades" (click)="toggleMenu()">Novedades</a>
     </nav>
   </div>
 </header>

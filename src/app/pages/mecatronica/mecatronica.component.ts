@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 
 @Component({
   selector: 'app-mecatronica',
   standalone: true,
   templateUrl: './mecatronica.component.html',
   styleUrls: ['./mecatronica.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, SectoresComponent]
 })
 export class MecatronicaComponent {
   lab = {
@@ -29,36 +30,12 @@ export class MecatronicaComponent {
     relacionadas con la discapacidad, mediante el diseño y desarrollo de sistemas de domótica, dispositivos 
     de electromedicina y otras herramientas tecnológicas.`
   };
-  galeria = [
+  galeriaMecatronica = [
     { imagen: 'assets/img/foto1Mecatronica.jpeg', descripcion: 'Cortina instalada' },
     { imagen: 'assets/img/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
     { imagen: 'assets/img/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
-  
-  visorAbierto = false;
-  visorIndice = 0;
-  
-  esVideo(url: string): boolean {
-    return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  
-  abrirVisor(indice: number): void {
-    this.visorIndice = indice;
-    this.visorAbierto = true;
-  }
-  
-  cerrarVisor(): void {
-    this.visorAbierto = false;
-  }
-  
-  anterior(event: Event): void {
-    event.stopPropagation();
-    this.visorIndice = (this.visorIndice - 1 + this.galeria.length) % this.galeria.length;
-  }
-  
-  siguiente(event: Event): void {
-    event.stopPropagation();
-    this.visorIndice = (this.visorIndice + 1) % this.galeria.length;
-  }
-  
-}
+}  
