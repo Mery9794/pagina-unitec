@@ -31,9 +31,9 @@ export class MecatronicaComponent {
     de electromedicina y otras herramientas tecnológicas.`
   };
   galeriaMecatronica = [
-    { imagen: 'assets/img/foto1Mecatronica.jpeg', descripcion: 'Cortina instalada' },
-    { imagen: 'assets/img/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
-    { imagen: 'assets/img/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
+    { imagen: 'assets/img/mecatronica/foto1Mecatronica.jpeg', descripcion: 'Cortina instalada' },
+    { imagen: 'assets/img/mecatronica/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
+    { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

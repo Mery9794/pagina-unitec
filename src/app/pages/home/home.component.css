@@ -118,3 +118,9 @@
   font-size: 0.9rem;
   text-align: center;
 }
+.resaltado-unitec {
+  background: linear-gradient(to right,  #172130, #025375);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}

@@ -15,10 +15,8 @@ export class LabticComponent {
     descripcion: 'Laboratorio de Tecnologías de la Información y la Comunicación',
     logo: 'assets/logos/logo-labtic.jpg',
     supervisores: [
-      'Ing. Marcelo', 
-      'Fernández Busse',
-      'Lic. José Alberto',
-      'Ferreyra'
+      'Ing. Marcelo Fernández Busse',
+      'Lic. José Alberto Ferreyra'
     ],
     colaboradores: [
       'Juan Marcos Malanga',

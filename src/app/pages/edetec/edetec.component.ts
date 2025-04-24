@@ -18,7 +18,6 @@ export class EdetecComponent {
       'Felipe Simonetti'
     ],
     colaboradores: [
-      'Francisco Navarro',
       'Bruno Benítez'
     ],
     queHacemos: `   Nos especializamos en el desarrollo de rampas tecnológicas que promuevan la accesibilidad y
@@ -29,9 +28,8 @@ export class EdetecComponent {
        específicas de cada persona o institución.`
   };
   galeriaEdetec = [
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' }
+    { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: '' },
+    { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: '' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

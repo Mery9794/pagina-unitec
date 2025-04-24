@@ -18,8 +18,6 @@ export class LateComponent {
       'Luis Ferrufino'
     ],
     colaboradores: [
-      'Agustín Nieto',
-      'Martín Romero',
       'Daniel Alejandro Fernández',
       'Valentín Diego González'
     ],
@@ -31,9 +29,8 @@ export class LateComponent {
        acceso a la tecnología.`
   };
   galeriaLate = [
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' }
+    { imagen: 'assets/img/late/late1.jpg', descripcion: '' },
+    { imagen: 'assets/img/late/late2.jpg', descripcion: '' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

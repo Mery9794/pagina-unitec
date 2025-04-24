@@ -18,11 +18,8 @@ export class InfotecComponent {
       'Manuel Teves',
       'María Solange Catañeda Pariona'
     ],
-    colaboradores: [
-      'Jenaro Luciano',
-      'Cecacci Porrez',
-      'Amílcar Catriel Paz'
-    ],
+    colaboradores: [    ],
+    
     queHacemos: `INFOTEC es un espacio de extensión de UNiTEC dedicado a la investigación, desarrollo e implementación
     de soluciones tecnológicas en el ámbito del software, redes y sistemas inteligentes. Está orientado
     principalmente a la enseñanza de desarrollo web con tecnologías como HTML, CSS, JavaScript y nociones

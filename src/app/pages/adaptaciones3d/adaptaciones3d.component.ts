@@ -17,12 +17,8 @@ export class Adaptaciones3dComponent {
     supervisores: [
       'Francisco Bustos'
     ],
-    colaboradores: [
-      'Luciano Macías',
-      'Gustavo Mamani',
-      'Víctor Palomar',
-      'Tomás Naranjo'
-    ],
+    colaboradores: [    ],
+    
     queHacemos: ` Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando
       impresión 3D. Se realizan piezas de repuesto para impresoras, adaptaciones como switches accesibles
       y otros dispositivos solicitados por distintos laboratorios. `,
@@ -31,9 +27,8 @@ export class Adaptaciones3dComponent {
       de piezas personalizadas impresas en 3D.`
   };
   galeriaAdaptaciones3d = [
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' }
+    { imagen: 'assets/img/3d/foto1Adap3D.jpg', descripcion: '' },
+    { imagen: 'assets/img/3d/foto2Adap3D.jpg', descripcion: '' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
