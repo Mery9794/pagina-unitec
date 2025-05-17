@@ -13,9 +13,10 @@
             &nbsp;|&nbsp;
             <span class="noticia-resumen">{{ noticia.resumen }}</span>
           </p>
-          
-          <div class="btn-container">
-            <a [href]="noticia.linkFacebook" target="_blank">
+
+          <!-- Botón para ir al detalle -->
+          <div class="btn-container" *ngIf="noticia.contenido || noticia.fotos?.length">
+            <a [routerLink]="['/noticias', noticia.id]">
               <button class="btn-ver-mas">Ver más</button>
             </a>
           </div>

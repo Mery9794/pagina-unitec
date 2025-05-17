@@ -2,8 +2,9 @@ export interface Noticia {
   id: string;
   titulo: string;
   resumen: string;
-  contenido?: string; // opcional
+  contenido?: string;
   fecha: Date;
   imagenUrl: string;
-  linkFacebook: string;
+  fotos?: string[];
+  linkFacebook?: string;
 }

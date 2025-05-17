@@ -23,7 +23,7 @@
     width: 100%;
     border-radius: 4px;
     object-fit: cover;
-    height: 150px;
+    height: 250px;
   }
   
   .gallery-item p {
@@ -36,7 +36,7 @@
     width: 100%;
     border-radius: 4px;
     object-fit: cover;
-    height: 150px;
+    height: 250px;
   }
   
   /* Estilos para el visor modal */

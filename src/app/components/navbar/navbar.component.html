@@ -1,10 +1,8 @@
-<header [class.scrolled]="navbarScrolled" class="navbar" role="banner">
+<header class="navbar" role="banner">
   <div class="navbar-bg"></div>
 
- <!--cuando NO hay scroll -->
   <div class="navbar-container">
-    @if (!navbarScrolled) {
-    <!-- Logo y texto solo si NO hay scroll -->
+    <!-- SIEMPRE visible -->
     <div class="logo-container">
       <a href="#inicio">
         <img src="assets/logos/logo-unitec.jpg" alt="Logo Unitec" />
@@ -17,73 +15,16 @@
         </p>
       </div>
     </div>
-
-    <!-- Logos institucionales cuando NO hay scroll -->
+    
     <div id="header-sidebar" class="institutional-logos">
-      <a href="https://www.ing.unlp.edu.ar/" target="_blank">
-        <img src="https://leme.ing.unlp.edu.ar/wp-content/uploads/2017/08/ing-300x180.png"
-          alt="Facultad de Ingeniería UNLP" width="108" height="65" />
-      </a>
-      <a href="https://unlp.edu.ar/" target="_blank">
-        <img src="https://leme.ing.unlp.edu.ar/wp-content/uploads/sites/24/2018/03/logo-transparente-unlp.png"
-          alt="UNLP" width="140" height="67" />
-      </a>
-    </div>
-    }
-
-    <!-- Botón menú mobile -->
-    <button class="mobile-toggle" (click)="toggleMenu()">☰</button>
-  </div>
-
-  <!-- Barra de navegación (desktop) -->
-<!-- Barra de navegación (desktop) -->
-<nav class="nav-bar desktop">
-  <div class="navbar-inner">
-  
-    <!-- Logo Unitec (SIEMPRE visible a la izquierda si hay scroll) -->
-    @if (navbarScrolled) {
-    <div class="logo-unitec">
-      <a>
-        <img src="assets/logos/logo-unitec.jpg" alt="Logo Unitec" />
-      </a>
-      <div class="logo-text">
-        <h2>UNiTEC</h2>
+      <div class="logo-split-container">
+        <a href="https://www.ing.unlp.edu.ar/" target="_blank" class="logo-half left-half"></a>
+        <a href="https://unlp.edu.ar" target="_blank" class="logo-half right-half"></a>
+        <img src="assets/logos/logo.png" alt="Facultad de Ingeniería UNLP" />
       </div>
     </div>
-    }
-
-    <!-- Links de navegación (centro) -->
-    <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#sectores">Sectores</a>
-      <a href="#novedades">Novedades</a>
-    </div>
-
-    <!-- Logos institucionales (derecha solo si hay scroll) -->
-    @if (navbarScrolled) {
-    <div class="institutional-logos">
-      <a href="https://www.ing.unlp.edu.ar/" target="_blank">
-        <img src="https://leme.ing.unlp.edu.ar/wp-content/uploads/2017/08/ing-300x180.png"
-          alt="Facultad de Ingeniería UNLP" width="80" height="45" />
-      </a>
-      <a href="https://unlp.edu.ar/" target="_blank">
-        <img src="https://leme.ing.unlp.edu.ar/wp-content/uploads/sites/24/2018/03/logo-transparente-unlp.png"
-          alt="UNLP" width="100" height="45" />
-      </a>
-    </div>
-    }
+    
 
   </div>
-</nav>
 
-
-  <!-- Menú navegación (mobile) -->
-  <nav class="nav-links mobile" [class.show]="menuAbierto">
-    <button class="close-btn" (click)="toggleMenu()">×</button>
-    <a href="#inicio" (click)="toggleMenu()">Inicio</a>
-    <a href="#nosotros" (click)="toggleMenu()">Nosotros</a>
-    <a href="#sectores" (click)="toggleMenu()">Sectores</a>
-    <a href="#novedades" (click)="toggleMenu()">Novedades</a>
-  </nav>
 </header>

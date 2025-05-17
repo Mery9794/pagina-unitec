@@ -99,3 +99,46 @@
   line-height: 1.6;
   font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+  .lab-profile-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .lab-left, .lab-right {
+    max-width: 100%;
+    flex: 1;
+    padding: 15px;
+  }
+
+  .lab-left {
+    margin-bottom: 20px;
+  }
+
+  .lab-logo {
+    max-width: 150px;
+    margin: 0 auto 20px auto;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  .lab-banner h1 {
+    font-size: 2rem;
+  }
+
+  .lab-banner p {
+    font-size: 1rem;
+  }
+
+  .lab-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .lab-right h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -29,9 +29,8 @@ export class InfotecComponent {
     universitaria en carreras vinculadas a sistemas y tecnologías de la información.`
   };
   galeriaInfoTec = [
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' }
+    { imagen: 'assets/img/infotec/img1.jpg', descripcion: '' }, 
+    { imagen: 'assets/img/infotec/img2.jpg', descripcion: '' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

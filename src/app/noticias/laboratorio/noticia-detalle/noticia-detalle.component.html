@@ -1,0 +1,19 @@
+<div *ngIf="noticia" class="detalle-noticia">
+  <article class="noticia-contenido">
+    <h2 class="titulo">{{ noticia.titulo }}</h2>
+    <p class="fecha">{{ noticia.fecha | date: 'd MMMM y' }}</p>
+
+    <section class="texto-principal">
+      <p>{{ noticia.contenido }}</p>
+    </section>
+
+    <!-- Carrusel de fotos -->
+    <section class="carrusel-container" *ngIf="todasLasFotos.length > 0">
+      <button class="carrusel-btn prev" (click)="anterior()">❮</button>
+      <div class="carrusel-viewport">
+        <img [src]="todasLasFotos[fotoActual]" alt="Imagen de noticia" />
+      </div>
+      <button class="carrusel-btn next" (click)="siguiente()">❯</button>
+    </section>
+  </article>
+</div>

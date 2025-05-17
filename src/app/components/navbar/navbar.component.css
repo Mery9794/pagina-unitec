@@ -14,7 +14,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   flex: 1;
 }
 
@@ -24,21 +24,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #00112d, #03092d96);
+  background: linear-gradient(to right, #1e293b, #0ea5e9);
   z-index: -1;
   box-shadow: 0 3px 8px rgb(0 0 0);
 }
 
-
 .navbar-container {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 1rem;
   position: relative;
-  gap: 1rem; 
-  width: 100%; 
+  gap: 1rem;
+  width: 100%;
 }
 
 /* Logo principal y texto */
@@ -89,138 +88,13 @@
   gap: 1rem;
   padding: 0.5rem 2rem;
 }
+
 #header-sidebar img {
   max-height: 70px;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-/* Menú navegación escritorio */
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: opacity 0.3s ease;
-}
-
-.nav-links a:hover {
-  opacity: 0.6;
-}
-
-/* Botón menú mobile */
-.mobile-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Menú navegación mobile */
-.nav-links.mobile {
-  display: none;
-  flex-direction: column;
-  background: linear-gradient(to right, #08152b, #5c607d57);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  z-index: 1001;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.nav-links.mobile.show {
-  display: flex;
-  opacity: 1;
-  pointer-events: all;
-}
-
-.nav-links.mobile a {
-  font-size: 2rem;
-  padding: 1rem;
-  color: white;
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .desktop {
-    display: none;
-  }
-
-  .mobile-toggle {
-    display: block;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #header-sidebar {
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
-
-  .logo-text {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-bar {
-    display: none;
-  }
-}
-
-.nav-bar {
-  width: 100%;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-}
-
-.nav-bar .nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.nav-bar .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.nav-bar .nav-links a:hover {
-  color: #0ea5e9;
-}
-
-/* Estilos al hacer scroll */
 .navbar.scrolled .logo-container img {
   height: 35px;
 }
@@ -250,9 +124,7 @@
 .logo-text h2,
 .logo-text p,
 #header-sidebar img,
-.nav-bar {
-  transition: all 0.3s ease;
-}
+
 /* Logo principal y texto */
 .logo-container {
   display: flex;
@@ -261,10 +133,10 @@
 }
 
 .logo-container img {
-  height: 60px; 
+  height: 60px;
   transition: all 0.3s ease;
 }
-/* Logos institucionales cuando hay scroll (dentro de la nav-bar) */
+
 #header-sidebar-scroll {
   display: flex;
   align-items: center;
@@ -278,21 +150,13 @@
   object-fit: contain;
 }
 
-/* Estilo cuando hay scroll */
 header.scrolled {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff; /* o lo que uses */
+  background-color: #fff;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.navbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 2rem;
 }
 
 .logo-unitec {
@@ -310,15 +174,97 @@ header.scrolled {
   font-size: 2rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex: 1;
-}
-
 .institutional-logos {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    align-items: flex-start;
+    padding: 0.5rem;
+    display: flex;
+  }
+
+  .logo-container {
+    gap: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+.logo-container img {
+  height: 40px;
+}
+
+.logo-text {
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 120px;
+}
+
+.logo-text h2 {
+  font-size: 1.2rem;
+}
+
+.logo-text p {
+  font-size: 0.35rem;
+  max-width: 100%;
+  line-height: 1.1;
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#header-sidebar {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+#header-sidebar img {
+  max-height: 35px;
+}
+}
+
+
+.institutional-logos {
+  position: relative;
+  width: fit-content;
+}
+
+.logo-split-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-split-container img {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+
+.logo-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Mitad izquierda (Ingeniería) */
+.left-half {
+  left: 0;
+}
+
+/* Mitad derecha (UNLP) */
+.right-half {
+  right: 0;
 }

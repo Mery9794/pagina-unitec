@@ -29,6 +29,7 @@
   flex-direction: column;
   gap: 0.8rem;
   flex-grow: 1;
+  background-color: #e0e0e0;
 }
 
 .fecha {
