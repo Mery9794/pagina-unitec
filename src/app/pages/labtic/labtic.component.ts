@@ -32,8 +32,6 @@ export class LabticComponent {
       autónoma.`
   };
   galeriaLabtic = [
-    { imagen: 'assets/img/', descripcion: '' },
-    { imagen: 'assets/img/', descripcion: '' },
     { imagen: 'assets/img/', descripcion: '' }
   ];
   

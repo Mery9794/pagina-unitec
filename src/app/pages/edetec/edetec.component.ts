@@ -28,8 +28,8 @@ export class EdetecComponent {
        específicas de cada persona o institución.`
   };
   galeriaEdetec = [
-    { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: '' },
-    { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: '' }
+    { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: 'Mesa de trabajo' },
+    { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: 'Herramientas y prototipos' }
   ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
