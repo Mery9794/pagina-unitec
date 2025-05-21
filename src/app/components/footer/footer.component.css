@@ -1,6 +1,6 @@
 .footer {
-  background-color: #e0e0e0;
-  color: #111;
+  background-color: #2f3033;
+  color: #cbd5e1;
   padding: 2rem;
   font-size: 0.9rem;
 }
@@ -8,7 +8,7 @@
 .footer-title { 
   margin: 0;
   font-size: 2rem;
-  color: #757575;
+  color: #cbd5e1;
 
 }
 
@@ -137,7 +137,7 @@
 }
 
 .footer-info a {
-  color: #004aad;
+  color: #cbd5e1;
   text-decoration: none;
 }
 
@@ -145,13 +145,13 @@
   text-decoration: underline;
 }
 strong{
-  color:#4f4f4f
+  color:#cbd5e1
 }
 .footer-copy {
   text-align: center;
   width: 100%;
   margin: 0 auto;
   padding: 10px 0;
-  color: #403e3e;  
+  color: #cbd5e1;  
   font-size: 0.9rem;  
 }
