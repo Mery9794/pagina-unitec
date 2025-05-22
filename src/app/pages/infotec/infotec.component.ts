@@ -12,7 +12,7 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 export class InfotecComponent {
   lab = {
     nombre: 'INFOTEC',
-    descripcion: 'Innovación y desarrollo en tecnologías de la información',
+    descripcion: 'Espacio de desarrollo de aplicaciones para PcD y WebPage de UNITEC',
     logo: 'assets/logos/logo-infotec.jpg',
     supervisores: [
       'Manuel Teves',

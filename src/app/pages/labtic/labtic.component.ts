@@ -11,8 +11,8 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 })
 export class LabticComponent {
   lab = {
-    nombre: 'LABTIC',
-    descripcion: 'Laboratorio de Tecnologías de la Información y la Comunicación',
+    nombre: 'Labtic',
+    descripcion: 'Espacio de desarrollo de Hardware y Software con orientación al uso de TICs',
     logo: 'assets/logos/logo-labtic.jpg',
     supervisores: [
       'Ing. Marcelo Fernández Busse',
@@ -23,18 +23,16 @@ export class LabticComponent {
       'Simón López',
       'Valentín Atanasof'
     ],
-    queHacemos: `  Nos enfocamos en la adaptación de computadoras reacondicionadas por el laboratorio LATE,
-      incorporando software diseñado especialmente por nuestro equipo o herramientas asistivas como
-      lectores de pantalla, teclados virtuales, magnificadores, sintetizadores de voz, mouses ópticos y
-      otros recursos que facilitan la accesibilidad. `,
-    objetivo: ` Promover la inclusión digital mediante la adecuación tecnológica de equipos, brindando soluciones
-      personalizadas que permiten a más personas acceder y utilizar dispositivos informáticos de manera
-      autónoma.`
+    queHacemos: ` Espacio orientado a la adaptación y reacondicionamiento de computadoras, en articulación con el programa LATE.
+      Se instalan herramientas tecnológicas que permiten la accesibilidad digital de personas con discapacidad.`,
+    objetivo: ` Desarrollar y aplicar soluciones tecnológicas mediante la instalación de software asistivo (como lectores de pantalla, 
+    teclados virtuales, magnificadores, sintetizadores de voz, mouses ópticos, etc.) y software propietario desarrollado por el propio 
+    laboratorio. Estas acciones buscan garantizar el acceso igualitario a las TICs.`
   };
   galeriaLabtic = [
     { imagen: 'assets/img/', descripcion: '' }
   ];
-  
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

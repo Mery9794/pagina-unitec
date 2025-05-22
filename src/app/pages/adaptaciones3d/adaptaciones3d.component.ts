@@ -11,8 +11,8 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 })
 export class Adaptaciones3dComponent {
   lab = {
-    nombre: 'Adaptaciones Inclusivas en 3D',
-    descripcion: 'Diseño y fabricación de soluciones accesibles mediante impresión 3D',
+    nombre: 'Técnicas 3D',
+    descripcion: 'Espacio de diseño e impresión en 3D',
     logo: 'assets/logos/logo-tecnicas3d.jpg',
     supervisores: [
       'Francisco Bustos'

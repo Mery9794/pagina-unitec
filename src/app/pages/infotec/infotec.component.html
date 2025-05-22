@@ -1,33 +1,50 @@
-<section class="lab-banner">
-  <h1>{{ lab.nombre }}</h1>
-  <p>{{ lab.descripcion }}</p>
-</section>
-
-<section class="lab-profile-section">
-  <div class="lab-left">
-    <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-logo" />
-
-    <div class="lab-names">
-      <h3>Integrantes</h3>
-
-      <h4>Supervisores</h4>
-      <p *ngFor="let supervisor of lab.supervisores">{{ supervisor }}</p>
-
-      <h4>Colaboradores</h4>
-      <p *ngFor="let colaborador of lab.colaboradores">{{ colaborador }}</p>
+<section class="lab-hero">
+  <div class="lab-hero-content">
+    <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-hero-logo" />
+    <div>
+      <h1>{{ lab.nombre }}</h1>
+      <p>{{ lab.descripcion }}</p>
     </div>
   </div>
+</section>
 
-  <div class="vertical-divider"></div>
-
-  <div class="lab-right">
+<section class="lab-content-grid">
+  <div class="lab-info-card">
     <h2>¿Qué hacemos?</h2>
     <p>{{ lab.queHacemos }}</p>
 
     <h3>Objetivo principal</h3>
     <p>{{ lab.objetivo }}</p>
   </div>
+
+  <div class="lab-members-card">
+    <h2>Equipo</h2>
+
+    <div class="lab-group">
+      <h4>Supervisores</h4>
+      <ul>
+        <li *ngFor="let supervisor of lab.supervisores">{{ supervisor }}</li>
+      </ul>
+    </div>
+
+    <div class="lab-group">
+      <h4>Colaboradores</h4>
+      <ul>
+        <li *ngFor="let colaborador of lab.colaboradores">{{ colaborador }}</li>
+      </ul>
+    </div>
+
+    <br>
+    
+    <!-- CONTACTO -->
+    <div class="lab-group">
+      <h5>Contacto</h5>
+      <ul class="lab-contact-list">
+        <a href="mailto:"></a>
+      </ul>
+    </div>
+    
+  </div>
 </section>
 
 <app-sectores [galeria]="galeriaInfoTec"></app-sectores>
-

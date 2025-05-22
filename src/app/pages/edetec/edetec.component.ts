@@ -12,7 +12,7 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 export class EdetecComponent {
   lab = {
     nombre: 'EDETEC',
-    descripcion: 'Laboratorio de Energía y Desarrollo Tecnológico',
+    descripcion: 'Espacio de Desarrollos Tecnológicos',
     logo: 'assets/logos/logo-edetec.jpg',
     supervisores: [
       'Felipe Simonetti'

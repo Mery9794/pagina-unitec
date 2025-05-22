@@ -12,7 +12,7 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 export class MecatronicaComponent {
   lab = {
     nombre: 'MECATRÓNICA',
-    descripcion: 'Laboratorio de Integración de Sistemas Mecánicos y Electrónicos',
+    descripcion: 'Espacio de desarrollo de aplicaciones para la Domótica y Electromedicina',
     logo: 'assets/logos/logo-mecatronica.jpg',
     supervisores: [
       'Ing. Marcelo Fernández Busse',
@@ -23,12 +23,12 @@ export class MecatronicaComponent {
       'Simón López',
       'Valentín Atanasof'
     ],
-    queHacemos: ` Este espacio de extensión se dedica a la investigación y desarrollo de tecnologías 
-    aplicadas a la inclusión, con foco en la integración de sistemas mecánicos, electrónicos e informáticos. 
-    Se trabaja especialmente con domótica y electromedicina, orientadas a personas con discapacidad. `,
-    objetivo: ` Investigar y aplicar las Tecnologías de la Información y la Comunicación (TIC) en soluciones 
-    relacionadas con la discapacidad, mediante el diseño y desarrollo de sistemas de domótica, dispositivos 
-    de electromedicina y otras herramientas tecnológicas.`
+    queHacemos: ` Este espacio de extensión se dedica a la investigación y desarrollo de tecnologías aplicadas a
+     la inclusión, con foco en la integración de sistemas mecánicos, electrónicos e informáticos. Se trabaja especialmente 
+     con proyectos de domótica y electromedicina, orientados a mejorar la calidad de vida de personas con discapacidad (PcD).`,
+    objetivo: ` Investigar y aplicar las Tecnologías de la Información y la Comunicación (TIC) en el ámbito de la discapacidad,
+     mediante el diseño y desarrollo de sistemas domóticos, dispositivos de electromedicina y otras herramientas tecnológicas 
+     que favorezcan la autonomía y accesibilidad.`,
   };
   galeriaMecatronica = [
     { imagen: 'assets/img/mecatronica/foto1Mecatronica.jpeg', descripcion: 'Cortina instalada' },

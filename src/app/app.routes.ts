@@ -9,12 +9,14 @@ import { MecatronicaComponent } from './pages/mecatronica/mecatronica.component'
 import { ProgresarComponent } from './noticias/becas/progresar/progresar.component';
 import { BelgranoComponent } from './noticias/becas/belgrano/belgrano.component';
 import { NoticiaDetalleComponent } from './noticias/laboratorio/noticia-detalle/noticia-detalle.component';
+import { ArduinoComponent } from './pages/arduino/arduino.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'adaptaciones', component: Adaptaciones3dComponent },
   { path: 'edetec', component: EdetecComponent },
   { path: 'infotec', component: InfotecComponent },
+  { path: 'arduino', component: ArduinoComponent },
   { path: 'labtic', component: LabticComponent },
   { path: 'late', component: LateComponent },
   { path: 'mecatronica', component: MecatronicaComponent },

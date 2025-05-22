@@ -12,7 +12,7 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 export class LateComponent {
   lab = {
     nombre: 'LATE',
-    descripcion: 'Laboratorio de Automatización y Tecnologías Emergentes',
+    descripcion: 'Laboratorio de Asistencia Técnica a Establecimientos de Educación Especial',
     logo: 'assets/logos/logo-late.jpg',
     supervisores: [
       'Luis Ferrufino'
