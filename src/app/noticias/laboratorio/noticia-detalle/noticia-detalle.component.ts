@@ -19,32 +19,36 @@ export class NoticiaDetalleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private noticiasService: NoticiasService
-  ) {}
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+
     if (id) {
-      this.noticia = this.noticiasService.getNoticiaById(id);
-
-      if (this.noticia) {
+      const noticiaEncontrada = this.noticiasService.getNoticiaById(id);
+      if (noticiaEncontrada) {
+        this.noticia = noticiaEncontrada;
+        this.todasLasFotos = noticiaEncontrada.fotos ?? [];
+      } else {
+        // Manejo si no se encuentra la noticia
         this.todasLasFotos = [];
-
-        if (this.noticia.imagenUrl) {
-          this.todasLasFotos.push(this.noticia.imagenUrl);
-        }
-
-        if (this.noticia.fotos?.length) {
-          this.todasLasFotos.push(...this.noticia.fotos);
-        }
       }
+    } else {
+      // Manejo si no hay id en la ruta
+      this.todasLasFotos = [];
     }
-  }
-
-  anterior() {
-    this.fotoActual = (this.fotoActual - 1 + this.todasLasFotos.length) % this.todasLasFotos.length;
   }
 
   siguiente() {
     this.fotoActual = (this.fotoActual + 1) % this.todasLasFotos.length;
   }
+
+  anterior() {
+    this.fotoActual = (this.fotoActual - 1 + this.todasLasFotos.length) % this.todasLasFotos.length;
+  }
 }
+
+
+
+
+

@@ -5,6 +5,6 @@ export interface Noticia {
   contenido?: string;
   fecha: Date;
   imagenUrl: string;
-  fotos?: string[];
+  fotos: string[];
   linkFacebook?: string;
 }
