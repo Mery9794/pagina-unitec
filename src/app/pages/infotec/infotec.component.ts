@@ -18,8 +18,8 @@ export class InfotecComponent {
       'Manuel Teves',
       'María Solange Catañeda Pariona'
     ],
-    colaboradores: [    ],
-    
+    colaboradores: [],
+
     queHacemos: `INFOTEC es un espacio de extensión de UNiTEC dedicado a la investigación, desarrollo e implementación
     de soluciones tecnológicas en el ámbito del software, redes y sistemas inteligentes. Está orientado
     principalmente a la enseñanza de desarrollo web con tecnologías como HTML, CSS, JavaScript y nociones
@@ -28,10 +28,19 @@ export class InfotecComponent {
     habilidades prácticas desde un nivel inicial. Además, buscamos prepararlos para su futura formación
     universitaria en carreras vinculadas a sistemas y tecnologías de la información.`
   };
+
   galeriaInfoTec = [
-    { imagen: 'assets/img/infotec/img1.jpg', descripcion: 'Espacio donde se diseña y programan soluciones' }, 
+    { imagen: 'assets/img/infotec/img1.jpg', descripcion: 'Espacio donde se diseña y programan soluciones' },
     { imagen: 'assets/img/infotec/img2.jpg', descripcion: 'La mascota del laboratorio 🐶' }
   ];
+
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

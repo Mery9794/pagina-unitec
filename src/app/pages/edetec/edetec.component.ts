@@ -27,10 +27,19 @@ export class EdetecComponent {
        comunicadores pictográficos, interruptores de impacto, entre otros, respondiendo a las necesidades 
        específicas de cada persona o institución.`
   };
+
   galeriaEdetec = [
     { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: 'Mesa de trabajo' },
     { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: 'Herramientas y prototipos' }
   ];
+
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

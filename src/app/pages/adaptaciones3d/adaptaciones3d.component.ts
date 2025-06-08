@@ -26,10 +26,19 @@ export class Adaptaciones3dComponent {
       inclusión y respondiendo a las necesidades de otros espacios de extensión a través del desarrollo
       de piezas personalizadas impresas en 3D.`
   };
+
   galeriaAdaptaciones3d = [
     { imagen: 'assets/img/3d/foto1Adap3D.jpg', descripcion: 'Espacio de diseño y fabricación' },
     { imagen: 'assets/img/3d/foto2Adap3D.jpg', descripcion: 'Impresora 3D' }
   ];
+
+  descargas = [
+  {
+    nombre: 'Catálogo de proyectos 3D',
+    archivo: 'assets/descargas/catalogo-proyectos-3d.pdf'
+  }
+];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

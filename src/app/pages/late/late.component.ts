@@ -28,10 +28,19 @@ export class LateComponent {
        organismos, instituciones y personas que lo necesiten, promoviendo la inclusión digital y el 
        acceso a la tecnología.`
   };
+
   galeriaLate = [
     { imagen: 'assets/img/late/late1.jpg', descripcion: 'Espacio de trabajo' },
     { imagen: 'assets/img/late/late2.jpg', descripcion: 'Computadora arreglada y reacondicionada, lista para entregar ' }
   ];
+
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

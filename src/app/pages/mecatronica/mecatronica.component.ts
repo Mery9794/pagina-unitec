@@ -30,11 +30,20 @@ export class MecatronicaComponent {
      mediante el diseño y desarrollo de sistemas domóticos, dispositivos de electromedicina y otras herramientas tecnológicas 
      que favorezcan la autonomía y accesibilidad.`,
   };
+
   galeriaMecatronica = [
     { imagen: 'assets/img/mecatronica/foto1Mecatronica.jpeg', descripcion: 'Cortina instalada' },
     { imagen: 'assets/img/mecatronica/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
     { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
+
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

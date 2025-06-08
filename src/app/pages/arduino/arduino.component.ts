@@ -26,10 +26,18 @@ export class ArduinoComponent {
     objetivo: ` Investigar, diseñar y desarrollar rampas tecnológicas accesibles utilizando Arduino, con el fin de promover la 
     inclusión y participación activa de PcD en distintos contextos sociales, educativos y cotidianos.`
   };
+
   galeriaArduino = [
     { imagen: 'assets/img/', descripcion: '' }
   ];
 
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+  
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

@@ -33,6 +33,13 @@ export class LabticComponent {
     { imagen: 'assets/img/', descripcion: '' }
   ];
 
+  descargas = [
+    {
+      nombre: 'Catálogo de proyectos',
+      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+    }
+  ];
+  
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

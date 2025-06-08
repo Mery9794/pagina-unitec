@@ -1,22 +1,14 @@
 <section class="lab-hero">
   <div class="lab-hero-content">
-    <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-hero-logo" />
-    <div>
+    <div class="lab-hero-title">
+      <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-hero-logo" />
       <h1>{{ lab.nombre }}</h1>
-      <p>{{ lab.descripcion }}</p>
     </div>
+    <p>{{ lab.descripcion }}</p>
   </div>
 </section>
 
 <section class="lab-content-grid">
-  <div class="lab-info-card">
-    <h2>¿Qué hacemos?</h2>
-    <p>{{ lab.queHacemos }}</p>
-
-    <h3>Objetivo principal</h3>
-    <p>{{ lab.objetivo }}</p>
-  </div>
-
   <div class="lab-members-card">
     <h2>Equipo</h2>
 
@@ -35,7 +27,7 @@
     </div>
 
     <br>
-    
+
     <!-- CONTACTO -->
     <div class="lab-group">
       <h5>Contacto</h5>
@@ -43,8 +35,27 @@
         <a href="mailto:"></a>
       </ul>
     </div>
-    
   </div>
+
+  <div class="lab-info-card">
+    <h2>¿Qué hacemos?</h2>
+    <p>{{ lab.queHacemos }}</p>
+
+    <h3>Objetivo principal</h3>
+    <p>{{ lab.objetivo }}</p>
+  </div>
+</section>
+
+<section class="lab-downloads">
+  <h2>Contenido para descargar</h2>
+  <ul>
+     <li *ngFor="let item of descargas">
+      <i class="fa-regular fa-file-lines"></i>
+      <a [href]="item.archivo" download target="_blank">
+         {{ item.nombre }}
+      </a>
+    </li>
+  </ul>
 </section>
 
 <app-sectores [galeria]="galeriaInfoTec"></app-sectores>

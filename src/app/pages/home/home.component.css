@@ -5,7 +5,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* CARD Informativa */
+/* Card informativa */
 .info {
   margin-top: 3rem;
 }
@@ -14,10 +14,6 @@
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   background: #ecf5ff;
   border-left: 5px solid #3498db;
   margin-bottom: 25px;
@@ -28,6 +24,7 @@
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  margin-top: 40px;
 }
 
 .card-content h2 {
@@ -44,96 +41,187 @@
   line-height: 1.6;
 }
 
-/* Laboratorios / Sectores */
+/* Sección laboratorios */
 .laboratorios {
-  margin-top: 3rem;
+  background-color: #f7f7f7;
 }
 
 .laboratorios h2 {
   font-size: 2rem;
-  color: #0e2c4c;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .laboratorios p {
   text-align: center;
   margin-bottom: 2rem;
   color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.lab-grid {
+.laboratorios-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   justify-items: center;
-  align-items: center;
-  padding: 0 1rem;
 }
 
-.lab-card {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px;
-  border-radius: 1rem;
-}
-
-.lab-card:hover {
-  transform: translateY(-5px);
-}
-
-.lab-image-container {
-  background-color: #cedbe3;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.laboratorio-card {
+  position: relative;
+  width: 330px;
+  height: 115px;
+  cursor: pointer;
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #a7a7a7;
+  ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-.lab-card:hover .lab-image-container {
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.laboratorio-card:not(.vacia):hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #3e4042;
 }
 
-.lab-image-container img {
+.laboratorio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.laboratorio-card.selected {
+  outline: 3px solid #007bff;
+  background-color: #cde7ff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.laboratorio-card:hover,
+.laboratorio-card.selected {
+  background-color: #3e4042;
+}
+
+.laboratorio-card .fondo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
-.lab-card span {
-  margin-top: 0.75rem;
+.contenido-nombre-logo {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: center;
+  bottom: 0px;
+  right: 0px;
+  justify-content: center;
+}
+
+.nombre-lab {
+  color: #6c6c6c;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+}
+
+/* Tarjetas vacías */
+.laboratorio-card.vacia {
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+  filter: grayscale(100%) brightness(1.1);
+  opacity: 0.8;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d6d6;
+}
+
+
+.laboratorio-card.vacia .unitec-contenido {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
   font-weight: bold;
   color: #0e2c4c;
-  font-size: 0.95rem;
-  text-align: center;
+  font-size: 1.1rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .lab-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+.laboratorio-card.vacia .logo {
+  max-width: 60px;
+  max-height: 60px;
 }
 
-@media (max-width: 500px) {
-  .lab-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* Texto destacado */
 .resaltado-unitec {
   background: linear-gradient(to right, #3498db, #6dd5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .laboratorios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .laboratorio-card {
+    width: 100%;
+    max-width: 280px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .laboratorios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laboratorio-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contenido-nombre-logo {
+    flex-direction: column-reverse;
+    padding: 0.5rem;
+  }
+
+  .nombre-lab {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 90px;
+  }
 }
