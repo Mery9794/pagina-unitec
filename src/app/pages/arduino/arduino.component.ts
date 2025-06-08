@@ -34,7 +34,7 @@ export class ArduinoComponent {
   descargas = [
     {
       nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/catalogo-proyectos.pdf'
+      archivo: 'assets/descargas/'
     }
   ];
   

@@ -35,7 +35,7 @@ export class Adaptaciones3dComponent {
   descargas = [
   {
     nombre: 'Catálogo de proyectos 3D',
-    archivo: 'assets/descargas/catalogo-proyectos-3d.pdf'
+    archivo: 'assets/descargas/'
   }
 ];
 
