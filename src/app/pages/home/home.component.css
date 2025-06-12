@@ -255,18 +255,6 @@
 }
 
 
-@media (max-width: 992px) {
-  .laboratorios-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .laboratorio-card {
-    width: 100%;
-    max-width: 280px;
-    height: 110px;
-  }
-}
-
 @media (max-width: 600px) {
   .laboratorios-grid {
     grid-template-columns: 1fr;
@@ -279,7 +267,6 @@
   }
 
   .contenido-nombre-logo {
-    flex-direction: column-reverse;
     padding: 0.5rem;
   }
 
