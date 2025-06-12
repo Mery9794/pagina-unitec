@@ -15,8 +15,8 @@ export class BannerComponent {
   slides = [
     {
       imagen: 'assets/img/banner.jpg',
-      titulo: 'UNiTEC - UNLP',
-      descripcion: 'Unidad de Innovación Tecnológica'
+      titulo: ' ',
+      descripcion: ' '
     },
     {
       imagen: 'assets/img/progresar.jpg',

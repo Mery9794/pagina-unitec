@@ -30,9 +30,11 @@
 
       <div class="laboratorios-grid">
         <!-- Tarjetas completas -->
-        <ng-container *ngFor="let lab of laboratorios.slice(0, laboratorios.length - (laboratorios.length % 3 || 3)); let i = index">
-          <div class="laboratorio-card" [class.selected]="i === seleccionado" (click)="seleccionarLaboratorio(i)" [routerLink]="['/', lab.ruta]">
-            <img class="fondo" src="assets/img/img2.jpg" alt="Fondo" />
+        <ng-container
+          *ngFor="let lab of laboratorios.slice(0, laboratorios.length - (laboratorios.length % 3 || 3)); let i = index">
+          <div class="laboratorio-card" [ngClass]="'color-' + (i % 7)" [class.selected]="i === seleccionado"
+            (click)="seleccionarLaboratorio(i)" [routerLink]="['/', lab.ruta]">
+            <img class="fondo" src="assets/img/img2-copia.jpg" alt="Fondo" />
             <div class="contenido-nombre-logo">
               <img class="logo" [src]="lab.logo" [alt]="lab.nombre" />
               <span class="nombre-lab">{{lab.nombre}}</span>
@@ -43,17 +45,18 @@
         <!-- Relleno antes -->
         <div class="laboratorio-card vacia" *ngFor="let _ of getEspaciosRellenoLados().antes">
           <div class="unitec-contenido">
-            <img class="logo" src="assets/logos/logo-unitec.jpg" alt="UNiTEC" />
+            <img class="logo" src="assets/logos/logo-unitec-copia.png" alt="UNiTEC" />
           </div>
         </div>
 
         <!-- Últimos laboratorios -->
         <ng-container *ngFor="let lab of laboratorios.slice(-((laboratorios.length % 3) || 3)); let i = index">
           <div class="laboratorio-card"
-               [class.selected]="(laboratorios.length - ((laboratorios.length % 3) || 3) + i) === seleccionado"
-               (click)="seleccionarLaboratorio(laboratorios.length - ((laboratorios.length % 3) || 3) + i)"
-               [routerLink]="['/', lab.ruta]">
-            <img class="fondo" src="assets/img/img2.jpg" alt="Fondo" />
+            [ngClass]="'color-' + ((laboratorios.length - ((laboratorios.length % 3) || 3) + i) % 7)"
+            [class.selected]="(laboratorios.length - ((laboratorios.length % 3) || 3) + i) === seleccionado"
+            (click)="seleccionarLaboratorio(laboratorios.length - ((laboratorios.length % 3) || 3) + i)"
+            [routerLink]="['/', lab.ruta]">
+            <img class="fondo" src="assets/img/img2-copia.jpg" alt="Fondo" />
             <div class="contenido-nombre-logo">
               <img class="logo" [src]="lab.logo" [alt]="lab.nombre" />
               <span class="nombre-lab">{{lab.nombre}}</span>
@@ -64,7 +67,7 @@
         <!-- Relleno después -->
         <div class="laboratorio-card vacia" *ngFor="let _ of getEspaciosRellenoLados().despues">
           <div class="unitec-contenido">
-            <img class="logo" src="assets/logos/logo-unitec.jpg" alt="UNiTEC" />
+            <img class="logo" src="assets/logos/logo-unitec-copia.png" alt="UNiTEC" />
           </div>
         </div>
       </div>

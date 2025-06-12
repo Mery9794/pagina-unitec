@@ -2,7 +2,6 @@
 .home-container {
   max-width: 1200px;
   margin: auto;
-  font-family: "Segoe UI", sans-serif;
 }
 
 /* Card informativa */
@@ -93,23 +92,14 @@
 .laboratorio-card:not(.vacia):hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background-color: #3e4042;
 }
 
-.laboratorio-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.laboratorio-card.selected {
-  outline: 3px solid #007bff;
-  background-color: #cde7ff;
-  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-}
-
+/* Estado hover */
 .laboratorio-card:hover,
 .laboratorio-card.selected {
-  background-color: #3e4042;
+  transform: scale(1.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .laboratorio-card .fondo {
@@ -122,6 +112,89 @@
   z-index: 1;
   transition: opacity 0.3s ease;
 }
+
+.laboratorio-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 11px;
+  width: 100%;
+  left: 0;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Colores automáticos */
+.color-0::after {
+  background-color: #30849f;
+}
+
+.color-1::after {
+  background-color: #5e2524;
+}
+
+.color-2::after {
+  background-color: #355f91;
+}
+
+.color-3::after {
+  background-color: #4a4429;
+}
+
+.color-4::after {
+  background-color: #77933a;
+}
+
+.color-5::after {
+  background-color: #5f4a7b;
+}
+
+.color-6::after {
+  background-color: #e66b07;
+}
+
+/* Colores dinámicos en hover y seleccionado */
+.color-0:hover,
+.color-0.selected {
+  background-color: #30849f;
+  border-bottom: 6px solid #30849f;
+}
+
+.color-1:hover,
+.color-1.selected {
+  background-color: #ddcbb6;
+  border-bottom: 6px solid #5e2524;
+}
+
+.color-2:hover,
+.color-2.selected {
+  background-color: #355f91;
+  border-bottom: 6px solid #355f91;
+}
+
+.color-3:hover,
+.color-3.selected {
+  background-color: #9b875a;
+  border-bottom: 6px solid #4a4429;
+}
+
+.color-4:hover,
+.color-4.selected {
+  background-color: #77933a;
+  border-bottom: 6px solid #77933a;
+}
+
+.color-5:hover,
+.color-5.selected {
+  background-color: #5f4a7b;
+  border-bottom: 6px solid #5f4a7b;
+}
+
+.color-6:hover,
+.color-6.selected {
+  background-color: #e4a66c;
+  border-bottom: 6px solid #e66b07;
+} 
+
 
 .contenido-nombre-logo {
   position: absolute;
@@ -181,13 +254,6 @@
   max-height: 60px;
 }
 
-/* Texto destacado */
-.resaltado-unitec {
-  background: linear-gradient(to right, #3498db, #6dd5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
 
 @media (max-width: 992px) {
   .laboratorios-grid {
