@@ -13,32 +13,37 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   laboratorios = [
-  { nombre: 'EDETEC', logo: 'assets/logos/logo-edetec.jpg', ruta:'edetec' },
-  { nombre: 'InfoTEC', logo: 'assets/logos/logo-infotec.jpg', ruta:'infotec' },
-  { nombre: 'ARDUINO', logo: 'assets/logos/logo-arduino.jpg', ruta:'arduino' },
-  { nombre: 'Técnicas 3D', logo: 'assets/logos/logo-tecnicas3d.jpg', ruta:'adaptaciones' },
-  { nombre: 'LATE', logo: 'assets/logos/logo-late.jpg', ruta:'late' },
-  { nombre: 'MECATRONICA', logo: 'assets/logos/logo-mecatronica.jpg', ruta:'mecatronica' },
-  { nombre: 'LabTIC', logo: 'assets/logos/logo-labtic.jpg', ruta:'labtic' },
-];
+    { nombre: 'EDETEC', logo: 'assets/logos/logo-edetec.jpg', ruta: 'edetec', fondo: 'assets/img/EDETEC.jpg' },
+    { nombre: 'INFOTEC', logo: '', ruta: 'infotec', fondo: 'assets/img/InfoTEC.jpg' },
+    { nombre: '', logo: 'assets/logos/logo-arduino.jpg', ruta: 'arduino', fondo: 'assets/img/Arduino.jpg' },
+    { nombre: 'TECNICAS 3D', logo: '', ruta: 'adaptaciones', fondo: 'assets/img/3D.jpg' },
+    { nombre: '', logo: 'assets/logos/logo-late.jpg', ruta: 'late', fondo: 'assets/img/LATE.png' },
+    { nombre: 'MECATRONICA', logo: 'assets/logos/logo-mecatronica.jpg', ruta: 'mecatronica', fondo: 'assets/img/Mecatronica.jpeg' },
+    { nombre: 'LABTIC', logo: '', ruta: 'labtic', fondo: 'assets/img/LasbTIC.jpg' },
+  ];
 
-seleccionado: number = -1;
+  seleccionado: number = -1;
 
-seleccionarLaboratorio(index: number) {
-  this.seleccionado = index;
-}
-
-getEspaciosRellenoLados(): { antes: any[]; despues: any[] } {
-  const total = this.laboratorios.length;
-  const resto = total % 3;
-
-  if (resto === 1) {
-    return { antes: [0], despues: [0] };
-  } else if (resto === 2) {
-    return { antes: [], despues: [0] };
-  } else {
-    return { antes: [], despues: [] };
+  seleccionarLaboratorio(index: number) {
+    this.seleccionado = index;
   }
-}
+
+  get laboratoriosCentrados() {
+    const base = [...this.laboratorios];
+    const total = base.length;
+    const resto = total % 3;
+
+    if (resto === 1) {
+      // Extraemos el último laboratorio
+      const lastLab = base.pop();
+      // Insertamos vacío - último laboratorio - vacío
+      return [...base, null, lastLab, null];
+    } else if (resto === 2) {
+      return [...base, null];
+    } else {
+      return base;
+    }
+  }
+
 
 }

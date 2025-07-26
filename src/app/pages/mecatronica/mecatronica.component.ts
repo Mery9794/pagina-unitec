@@ -36,14 +36,7 @@ export class MecatronicaComponent {
     { imagen: 'assets/img/mecatronica/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
     { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
-
-  descargas = [
-    {
-      nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/'
-    }
-  ];
-
+ 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

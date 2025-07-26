@@ -22,23 +22,14 @@ export class InfotecComponent {
 
     queHacemos: `INFOTEC es un espacio de extensión de UNiTEC dedicado a la investigación, desarrollo e implementación
     de soluciones tecnológicas en el ámbito del software, redes y sistemas inteligentes. Está orientado
-    principalmente a la enseñanza de desarrollo web con tecnologías como HTML, CSS, JavaScript y nociones
+    principalmente al uso de tecnologías como HTML, CSS, JavaScript y nociones
     básicas de bases de datos.`,
-    objetivo: `Brindar a los estudiantes sus primeros conocimientos en el mundo del desarrollo web, fomentando
-    habilidades prácticas desde un nivel inicial. Además, buscamos prepararlos para su futura formación
-    universitaria en carreras vinculadas a sistemas y tecnologías de la información.`
+    objetivo: `Analizar aplicaciones existentes para PcD, desarrollar aplicaciones propias e investigar para su instalacion sofware asistivo para ser instalado en las PC adaptadas que se entregan`
   };
 
   galeriaInfoTec = [
     { imagen: 'assets/img/infotec/img1.jpg', descripcion: 'Espacio donde se diseña y programan soluciones' },
     { imagen: 'assets/img/infotec/img2.jpg', descripcion: 'La mascota del laboratorio 🐶' }
-  ];
-
-  descargas = [
-    {
-      nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/'
-    }
   ];
 
   ngOnInit(): void {

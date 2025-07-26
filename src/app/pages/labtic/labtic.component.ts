@@ -32,13 +32,6 @@ export class LabticComponent {
   galeriaLabtic = [
     { imagen: 'assets/img/', descripcion: '' }
   ];
-
-  descargas = [
-    {
-      nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/'
-    }
-  ];
   
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

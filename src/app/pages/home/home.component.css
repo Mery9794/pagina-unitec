@@ -70,15 +70,34 @@
   width: 330px;
   height: 115px;
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 3px;
   overflow: hidden;
   background-color: #a7a7a7;
-  ;
+  background-position: center;
+  background-size: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
 }
+
+.fondo-imagen {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.fondo-imagen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(52 91 91 / 53%);
+  mix-blend-mode: multiply;
+}
+
+
 
 @keyframes fadeInUp {
   to {
@@ -121,92 +140,35 @@
   border-radius: 0 0 15px 15px;
 }
 
-/* Colores automáticos */
-.color-0::after {
-  background-color: #30849f;
+.laboratorio-card:hover,
+.laboratorio-card.selected {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.color-1::after {
-  background-color: #5e2524;
-}
-
-.color-2::after {
-  background-color: #355f91;
-}
-
-.color-3::after {
-  background-color: #4a4429;
-}
-
-.color-4::after {
-  background-color: #77933a;
-}
-
-.color-5::after {
-  background-color: #5f4a7b;
-}
-
-.color-6::after {
-  background-color: #e66b07;
-}
-
-/* Colores dinámicos en hover y seleccionado */
-.color-0:hover,
-.color-0.selected {
-  background-color: #30849f;
-}
-
-.color-1:hover,
-.color-1.selected {
-  background-color: #ddcbb6;
-}
-
-.color-2:hover,
-.color-2.selected {
-  background-color: #355f91;
-}
-
-.color-3:hover,
-.color-3.selected {
-  background-color: #9b875a;
-}
-
-.color-4:hover,
-.color-4.selected {
-  background-color: #77933a;
-}
-
-.color-5:hover,
-.color-5.selected {
-  background-color: #5f4a7b;
-}
-
-.color-6:hover,
-.color-6.selected {
-  background-color: #e4a66c;
-} 
-
-
+/* Contenido con logo y nombre */
 .contenido-nombre-logo {
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    bottom: 0px;
-    right: 0px;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.contenido-nombre-logo.solo-nombre, .contenido-nombre-logo.solo-logo {
+  justify-content: center;
 }
 
 .nombre-lab {
-  color: #6c6c6c;
-  font-weight: bold;
+  color: #ffffff;
   font-size: 20px;
 }
 
 .logo {
-  width: 110px;
+  width: 80px;
   height: auto;
 }
 
@@ -225,26 +187,22 @@
   background-color: #d9d6d6;
 }
 
-
 .laboratorio-card.vacia .unitec-contenido {
   position: absolute;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 0.5rem;
   text-align: center;
   font-weight: bold;
   color: #0e2c4c;
   font-size: 1.1rem;
+  flex-direction: row;
 }
-
 
 .laboratorio-card.vacia .logo {
   max-width: 60px;
   max-height: 60px;
 }
-
 
 @media (max-width: 600px) {
   .laboratorios-grid {
@@ -266,6 +224,6 @@
   }
 
   .logo {
-    width: 90px;
+    width: 80px;
   }
 }

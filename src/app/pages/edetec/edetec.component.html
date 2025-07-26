@@ -46,16 +46,4 @@
   </div>
 </section>
 
-<section class="lab-downloads">
-  <h2>Contenido para descargar</h2>
-  <ul>
-    <li *ngFor="let item of descargas">
-      <i class="fa-regular fa-file-lines"></i>
-      <a [href]="item.archivo" download target="_blank">
-         {{ item.nombre }}
-      </a>
-    </li>
-  </ul>
-</section>
-
 <app-sectores [galeria]="galeriaEdetec"></app-sectores>

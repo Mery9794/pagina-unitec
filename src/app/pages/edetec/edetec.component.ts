@@ -23,21 +23,14 @@ export class EdetecComponent {
     queHacemos: `   Nos especializamos en el desarrollo de rampas tecnológicas que promuevan la accesibilidad y
        la inclusión de personas con discapacidad (PcD), brindando soluciones concretas para facilitar 
        su participación en diferentes ámbitos. `,
-    objetivo: ` Crear y adaptar dispositivos tecnológicos como teclados y mouses especiales, juguetes accesibles,
-       comunicadores pictográficos, interruptores de impacto, entre otros, respondiendo a las necesidades 
-       específicas de cada persona o institución.`
+    objetivo: ` Crear y adaptar dispositivos tecnológicos como teclados y mouses, juguetes,
+       comunicadores pictográficos, interruptores de impacto; entre otros, respondiendo a las necesidades 
+       específicas o patologia de cada persona o institución.`
   };
 
   galeriaEdetec = [
     { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: 'Mesa de trabajo' },
     { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: 'Herramientas y prototipos' }
-  ];
-
-  descargas = [
-    {
-      nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/'
-    }
   ];
 
   ngOnInit(): void {

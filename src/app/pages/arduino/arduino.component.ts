@@ -13,7 +13,7 @@ import { SectoresComponent } from "../../noticias/sectores/sectores.component";
 export class ArduinoComponent {
   lab = {
     nombre: 'Arduino',
-    descripcion: 'Espacio de desarrollo de adaptaciones con la herramienta Arduino',
+    descripcion: 'Espacio de desarrollo de adaptaciones con el microcontrolador Arduino',
     logo: 'assets/logos/logo-arduino.jpg',
     supervisores: [
       'Diego Cervantes Flores'
@@ -29,13 +29,6 @@ export class ArduinoComponent {
 
   galeriaArduino = [
     { imagen: 'assets/img/', descripcion: '' }
-  ];
-
-  descargas = [
-    {
-      nombre: 'Catálogo de proyectos',
-      archivo: 'assets/descargas/'
-    }
   ];
   
   ngOnInit(): void {

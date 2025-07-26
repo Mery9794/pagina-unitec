@@ -21,7 +21,7 @@ export class Adaptaciones3dComponent {
     
     queHacemos: ` Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando
       impresión 3D. Se realizan piezas de repuesto para impresoras, adaptaciones como switches accesibles
-      y otros dispositivos solicitados por distintos laboratorios. `,
+      y otros dispositivos solicitados por los otros espacios de extension. `,
     objetivo: ` Brindar soporte técnico y creativo mediante tecnologías de fabricación digital, promoviendo la
       inclusión y respondiendo a las necesidades de otros espacios de extensión a través del desarrollo
       de piezas personalizadas impresas en 3D.`
@@ -31,13 +31,6 @@ export class Adaptaciones3dComponent {
     { imagen: 'assets/img/3d/foto1Adap3D.jpg', descripcion: 'Espacio de diseño y fabricación' },
     { imagen: 'assets/img/3d/foto2Adap3D.jpg', descripcion: 'Impresora 3D' }
   ];
-
-  descargas = [
-  {
-    nombre: 'Catálogo de proyectos 3D',
-    archivo: 'assets/descargas/'
-  }
-];
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
