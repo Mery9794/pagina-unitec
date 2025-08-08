@@ -9,33 +9,6 @@
 </section>
 
 <section class="lab-content-grid">
-  <div class="lab-members-card">
-    <h2>Equipo</h2>
-
-    <div class="lab-group">
-      <h4>Supervisores</h4>
-      <ul>
-        <li *ngFor="let supervisor of lab.supervisores">{{ supervisor }}</li>
-      </ul>
-    </div>
-
-    <div class="lab-group">
-      <h4>Colaboradores</h4>
-      <ul>
-        <li *ngFor="let colaborador of lab.colaboradores">{{ colaborador }}</li>
-      </ul>
-    </div>
-
-    <br>
-
-    <!-- CONTACTO -->
-    <div class="lab-group">
-      <h5>Contacto</h5>
-      <ul class="lab-contact-list">
-        <a href="mailto:"></a>
-      </ul>
-    </div>
-  </div>
 
   <div class="lab-info-card">
     <h2>¿Qué hacemos?</h2>
@@ -44,7 +17,24 @@
     <h3>Objetivo principal</h3>
     <p>{{ lab.objetivo }}</p>
   </div>
+
+  <div class="lab-members-card">
+    <h3>Equipo</h3>
+
+    <div class="lab-group">
+      <ul>
+         <p><li *ngFor="let supervisor of lab.supervisores">{{ supervisor }} (Supervisor)</li></p>
+      </ul>
+    </div>
+
+    <div class="lab-group">
+      <ul>
+        <p><li *ngFor="let colaborador of lab.colaboradores">{{ colaborador }} (Colaborador)</li></p>
+      </ul>
+    </div>
+
+    <br>
+  </div>
+
 </section>
-
-
 <app-sectores [galeria]="galeriaAdaptaciones3d"></app-sectores>

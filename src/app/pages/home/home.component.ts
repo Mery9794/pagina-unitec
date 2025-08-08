@@ -13,10 +13,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   laboratorios = [
-    { nombre: 'EDETEC', logo: 'assets/logos/logo-edetec.jpg', ruta: 'edetec', fondo: 'assets/img/EDETEC.jpg' },
+    { nombre: 'EDETEC', logo: '', ruta: 'edetec', fondo: 'assets/logos/jy.png' },
     { nombre: 'INFOTEC', logo: '', ruta: 'infotec', fondo: 'assets/img/InfoTEC.jpg' },
-    { nombre: '', logo: 'assets/logos/logo-arduino.jpg', ruta: 'arduino', fondo: 'assets/img/Arduino.jpg' },
-    { nombre: 'TECNICAS 3D', logo: '', ruta: 'adaptaciones', fondo: 'assets/img/3D.jpg' },
+    { nombre: '', logo: '', ruta: 'arduino', fondo: 'assets/img/Arduino.jpg' },
+    { nombre: '', logo: 'assets/logos/logo-tecnicas3d.png', ruta: 'adaptaciones', fondo: 'assets/img/3D.1.jpg' },
     { nombre: '', logo: 'assets/logos/logo-late.jpg', ruta: 'late', fondo: 'assets/img/LATE.png' },
     { nombre: 'MECATRONICA', logo: 'assets/logos/logo-mecatronica.jpg', ruta: 'mecatronica', fondo: 'assets/img/Mecatronica.jpeg' },
     { nombre: 'LABTIC', logo: '', ruta: 'labtic', fondo: 'assets/img/LasbTIC.jpg' },
@@ -34,7 +34,6 @@ export class HomeComponent {
     const resto = total % 3;
 
     if (resto === 1) {
-      // Extraemos el último laboratorio
       const lastLab = base.pop();
       // Insertamos vacío - último laboratorio - vacío
       return [...base, null, lastLab, null];

@@ -15,13 +15,10 @@ export class MecatronicaComponent {
     descripcion: 'Espacio de desarrollo de aplicaciones para la Domótica y Electromedicina',
     logo: 'assets/logos/logo-mecatronica.jpg',
     supervisores: [
-      'Ing. Marcelo Fernández Busse',
-      'Lic. José Alberto Ferreyra'
+      'Ing. Marcelo Fernández Busse', 'Lic. José Alberto Ferreyra'
     ],
     colaboradores: [
-      'Juan Marcos Malanga',
-      'Simón López',
-      'Valentín Atanasof'
+      'Juan Marcos Malanga', 'Simón López', 'Valentín Atanasof'
     ],
     queHacemos: ` Este espacio de extensión se dedica a la investigación y desarrollo de tecnologías aplicadas a
      la inclusión, con foco en la integración de sistemas mecánicos, electrónicos e informáticos. Se trabaja especialmente 
@@ -36,7 +33,10 @@ export class MecatronicaComponent {
     { imagen: 'assets/img/mecatronica/foto3Mecatronica.jpeg', descripcion: 'La mascota del laboratorio "Meca"' },
     { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
+
  
+
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

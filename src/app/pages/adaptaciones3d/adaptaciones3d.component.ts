@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SectoresComponent } from "../../noticias/sectores/sectores.component";
+import { SectoresComponent } from '../../noticias/sectores/sectores.component';
 
 @Component({
   selector: 'app-adaptaciones3d',
@@ -14,17 +14,16 @@ export class Adaptaciones3dComponent {
     nombre: 'Técnicas 3D',
     descripcion: 'Espacio de diseño e impresión en 3D',
     logo: 'assets/logos/logo-tecnicas3d.jpg',
-    supervisores: [
-      'Francisco Bustos'
-    ],
-    colaboradores: [    ],
-    
-    queHacemos: ` Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando
+    supervisores: ['Francisco Bustos'],
+     colaboradores: [],
+    queHacemos: `Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando
       impresión 3D. Se realizan piezas de repuesto para impresoras, adaptaciones como switches accesibles
-      y otros dispositivos solicitados por los otros espacios de extension. `,
-    objetivo: ` Brindar soporte técnico y creativo mediante tecnologías de fabricación digital, promoviendo la
-      inclusión y respondiendo a las necesidades de otros espacios de extensión a través del desarrollo
-      de piezas personalizadas impresas en 3D.`
+      y otros dispositivos solicitados por los otros espacios de extensión.`,
+    objetivo: [
+      `Brindar soporte técnico y creativo mediante tecnologías de fabricación digital.`,
+      `Promover la inclusión respondiendo a las necesidades de otros espacios de extensión.`,
+      `Desarrollar piezas personalizadas impresas en 3D.`
+    ]
   };
 
   galeriaAdaptaciones3d = [
