@@ -1,31 +1,71 @@
-<section class="lab-gallery">
-    <h2>Galería de actividades</h2>
-    <div class="gallery-grid">
-      <div *ngFor="let item of galeria; let i = index" class="gallery-item" (click)="abrirVisor(i)">
-        <ng-container *ngIf="esVideo(item.imagen); else imagenTemplate">
-          <video [src]="item.imagen" muted autoplay loop class="gallery-video"></video>
-        </ng-container>
-        <ng-template #imagenTemplate>
-          <img [src]="item.imagen" [alt]="item.descripcion" />
-        </ng-template>
-        <p>{{ item.descripcion }}</p>
+<!-- PROYECTOS -->
+<section class="proyectos" *ngIf="proyectos?.length">
+  <div class="noticias-container">
+    <h2 class="h2">Proyectos</h2>
+
+    <div class="lab-grid">
+      <div *ngFor="let proyecto of proyectos" class="noticia-card">
+        
+        <!-- Imagen del proyecto -->
+        <div class="imagen-proyecto" *ngIf="proyecto.imagen">
+          <img [src]="proyecto.imagen" [alt]="proyecto.nombre" />
+        </div>
+
+        <!-- Nombre -->
+        <h3 class="titulo-noticia">
+          {{ proyecto.nombre }}
+        </h3>
+
+        <!-- Descripción corta -->
+        <div class="contenido">
+          <p class="info-noticia">
+            {{ proyecto.descripcion }}
+          </p>
+
+          <!-- Botón ver más -->
+          <div class="btn-container">
+            <a [routerLink]="['/proyectos', proyecto.id]">
+              <button class="btn-ver-mas">Ver más</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Visor modal -->
-  <div class="visor-overlay" *ngIf="visorAbierto" (click)="cerrarVisor()">
-    <div class="visor-contenido" (click)="$event.stopPropagation()">
-      <button class="nav-btn" (click)="anterior($event)">‹</button>
-  
-      <ng-container *ngIf="esVideo(galeria[visorIndice].imagen); else imgFull">
-        <video [src]="galeria[visorIndice].imagen" controls autoplay></video>
+  </div>
+</section>
+
+<!-- GALERÍA (solo si hay items) -->
+<section class="lab-gallery" *ngIf="galeria?.length">
+  <h2>Galería de actividades</h2>
+
+  <div class="gallery-grid">
+    <div *ngFor="let item of galeria; let i = index" class="gallery-item" (click)="abrirVisor(i)">
+
+      <ng-container *ngIf="esVideo(item.imagen); else imagenTemplate">
+        <video [src]="item.imagen" muted autoplay loop class="gallery-video"></video>
       </ng-container>
-      <ng-template #imgFull>
-        <img [src]="galeria[visorIndice].imagen" />
+
+      <ng-template #imagenTemplate>
+        <img [src]="item.imagen" [alt]="item.descripcion" />
       </ng-template>
-  
-      <button class="nav-btn" (click)="siguiente($event)">›</button>
+
+      <p>{{ item.descripcion }}</p>
     </div>
   </div>
-  
+</section>
+
+<!-- Visor modal (solo aparece si se abrió) -->
+<div class="visor-overlay" *ngIf="visorAbierto" (click)="cerrarVisor()">
+  <div class="visor-contenido" (click)="$event.stopPropagation()">
+    <button class="nav-btn" (click)="anterior($event)">‹</button>
+
+    <ng-container *ngIf="esVideo(galeria[visorIndice].imagen); else imgFull">
+      <video [src]="galeria[visorIndice].imagen" controls autoplay></video>
+    </ng-container>
+    <ng-template #imgFull>
+      <img [src]="galeria[visorIndice].imagen" />
+    </ng-template>
+
+    <button class="nav-btn" (click)="siguiente($event)">›</button>
+  </div>
+</div>

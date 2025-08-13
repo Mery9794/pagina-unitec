@@ -30,7 +30,9 @@ export class ArduinoComponent {
   galeriaArduino = [
     { imagen: 'assets/img/', descripcion: '' }
   ];
-  
+    proyectosArduino = [
+    
+  ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

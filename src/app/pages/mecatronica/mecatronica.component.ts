@@ -34,8 +34,9 @@ export class MecatronicaComponent {
     { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
 
- 
+  proyectosMecatronica = [
 
+  ];
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

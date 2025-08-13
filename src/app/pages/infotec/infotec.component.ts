@@ -31,7 +31,9 @@ export class InfotecComponent {
     { imagen: 'assets/img/infotec/img1.jpg', descripcion: 'Espacio donde se diseña y programan soluciones' },
     { imagen: 'assets/img/infotec/img2.jpg', descripcion: 'La mascota del laboratorio 🐶' }
   ];
-
+  proyectosInfoTec= [
+    
+  ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

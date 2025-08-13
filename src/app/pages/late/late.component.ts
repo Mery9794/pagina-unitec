@@ -33,7 +33,9 @@ export class LateComponent {
     { imagen: 'assets/img/late/late1.jpg', descripcion: 'Espacio de trabajo' },
     { imagen: 'assets/img/late/late2.jpg', descripcion: 'Computadora arreglada y reacondicionada, lista para entregar ' }
   ];
- 
+   proyectosLate= [
+    
+  ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

@@ -10,6 +10,7 @@ import { ProgresarComponent } from './noticias/becas/progresar/progresar.compone
 import { BelgranoComponent } from './noticias/becas/belgrano/belgrano.component';
 import { NoticiaDetalleComponent } from './noticias/laboratorio/noticia-detalle/noticia-detalle.component';
 import { ArduinoComponent } from './pages/arduino/arduino.component';
+import { SectoresComponent } from './noticias/sectores/sectores.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'belgrano', component: BelgranoComponent },
   
   { path: 'noticias/:id', component: NoticiaDetalleComponent },
+   { path: 'proyectos/:id', component: SectoresComponent },
 
 
   { path: '**', redirectTo: '' }

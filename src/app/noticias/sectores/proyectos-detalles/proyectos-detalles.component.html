@@ -1,0 +1,24 @@
+<div *ngIf="proyecto" class="detalle-proyecto">
+  <article class="proyecto-contenido">
+    
+    <!-- Nombre del proyecto -->
+    <h2 class="titulo">{{ proyecto.nombre }}</h2>
+
+    <!-- Descripción principal -->
+    <section class="texto-principal">
+      <p>{{ proyecto.descripcionLarga }}</p>
+    </section>
+    
+    <!-- Carrusel de fotos -->
+    <section class="carrusel-container" *ngIf="todasLasFotos.length > 0">
+      <button class="carrusel-btn prev" *ngIf="todasLasFotos.length > 1" (click)="anterior()">❮</button>
+
+      <div class="carrusel-viewport">
+        <img *ngIf="todasLasFotos[fotoActual]" [src]="todasLasFotos[fotoActual]" alt="Imagen del proyecto" />
+      </div>
+
+      <button class="carrusel-btn next" *ngIf="todasLasFotos.length > 1" (click)="siguiente()">❯</button>
+    </section>
+
+  </article>
+</div>

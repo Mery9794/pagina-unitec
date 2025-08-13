@@ -32,7 +32,9 @@ export class EdetecComponent {
     { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: 'Mesa de trabajo' },
     { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: 'Herramientas y prototipos' }
   ];
-
+  proyectosEdetec= [
+    
+  ];
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

@@ -1,21 +1,30 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+type Proyecto = {
+  id: string | number;
+  nombre: string;
+  descripcion: string;
+  imagen?: string; 
+};
 
 @Component({
   selector: 'app-sectores',
   standalone: true,
   templateUrl: './sectores.component.html',
-  styleUrl: './sectores.component.css',
-  imports: [CommonModule]
+  styleUrls: ['./sectores.component.css'],
+  imports: [CommonModule, RouterModule]
 })
 export class SectoresComponent {
-  @Input() galeria: { imagen: string, descripcion: string }[] = [];
+  @Input() galeria: { imagen: string; descripcion: string }[] = [];
+  @Input() proyectos: Proyecto[] = [];
 
   visorAbierto = false;
   visorIndice = 0;
 
   esVideo(url: string): boolean {
-    return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');
+    return /\.mp4$|\.webm$|\.ogg$/i.test(url);
   }
 
   abrirVisor(indice: number): void {

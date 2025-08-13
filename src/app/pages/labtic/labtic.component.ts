@@ -29,8 +29,12 @@ export class LabticComponent {
     teclados virtuales, magnificadores, sintetizadores de voz, mouses ópticos, etc.) y software propietario desarrollado por el propio 
     laboratorio. Estas acciones buscan garantizar el acceso igualitario a las TICs.`
   };
+
   galeriaLabtic = [
-    { imagen: 'assets/img/', descripcion: '' }
+    
+  ];
+  proyectosLabtic= [
+    
   ];
   
   ngOnInit(): void {
