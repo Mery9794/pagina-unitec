@@ -13,13 +13,13 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   laboratorios = [
-    { nombre: 'EDETEC', logo: '', ruta: 'edetec', fondo: 'assets/logos/jy.png' },
-    { nombre: 'INFOTEC', logo: '', ruta: 'infotec', fondo: 'assets/img/InfoTEC.jpg' },
-    { nombre: '', logo: '', ruta: 'arduino', fondo: 'assets/img/Arduino.jpg' },
-    { nombre: '', logo: 'assets/logos/logo-tecnicas3d.png', ruta: 'adaptaciones', fondo: 'assets/img/3D.1.jpg' },
-    { nombre: '', logo: 'assets/logos/logo-late.jpg', ruta: 'late', fondo: 'assets/img/LATE.png' },
-    { nombre: 'MECATRONICA', logo: 'assets/logos/logo-mecatronica.jpg', ruta: 'mecatronica', fondo: 'assets/img/Mecatronica.jpeg' },
-    { nombre: 'LABTIC', logo: '', ruta: 'labtic', fondo: 'assets/img/LasbTIC.jpg' },
+    { nombre: 'EDETEC', logo: '', ruta: 'edetec', fondo: 'assets/logos/jy.png', descripcion: 'Desarrollos Tecnológicos' },
+    { nombre: 'INFOTEC', logo: '', ruta: 'infotec', fondo: 'assets/img/InfoTEC.jpg', descripcion: 'Desarrollo de aplicaciones para PcD y WebPage de UNITEC' },
+    { nombre: '', logo: '', ruta: 'arduino', fondo: 'assets/img/Arduino.jpg', descripcion: 'Desarrollo de adaptaciones con el microcontrolador Arduino' },
+    { nombre: '', logo: 'assets/logos/logo-tecnicas3d1.png', ruta: 'adaptaciones', fondo: 'assets/img/3D.1.jpg', descripcion: 'Diseño e impresión en 3D' },
+    { nombre: '', logo: 'assets/logos/logo-late.jpg', ruta: 'late', fondo: 'assets/img/LATE.png', descripcion: 'Asistencia Técnica a Establecimientos de Educación Especial' },
+    { nombre: 'MECATRONICA', logo: 'assets/logos/logo-mecatronica.jpg', ruta: 'mecatronica', fondo: 'assets/img/Mecatronica.jpeg', descripcion: 'Desarrollo de aplicaciones para la Domótica y Electromedicina' },
+    { nombre: 'LABTIC', logo: '', ruta: 'labtic', fondo: 'assets/img/LasbTIC.jpg', descripcion: 'Desarrollo de Hardware y Software con orientación al uso de TICs' },
   ];
 
   seleccionado: number = -1;
@@ -35,7 +35,7 @@ export class HomeComponent {
 
     if (resto === 1) {
       const lastLab = base.pop();
-      // Insertamos vacío - último laboratorio - vacío
+      //vacío - último laboratorio - vacío
       return [...base, null, lastLab, null];
     } else if (resto === 2) {
       return [...base, null];

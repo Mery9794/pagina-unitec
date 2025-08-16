@@ -1,24 +1,25 @@
 <div *ngIf="proyecto" class="detalle-proyecto">
   <article class="proyecto-contenido">
-    
-    <!-- Nombre del proyecto -->
     <h2 class="titulo">{{ proyecto.nombre }}</h2>
 
-    <!-- Descripción principal -->
     <section class="texto-principal">
-      <p>{{ proyecto.descripcionLarga }}</p>
+      <p>{{ proyecto.descripcionLarga || proyecto.descripcion }}</p>
     </section>
-    
-    <!-- Carrusel de fotos -->
+
+    <!-- Carrusel de fotos/videos -->
     <section class="carrusel-container" *ngIf="todasLasFotos.length > 0">
       <button class="carrusel-btn prev" *ngIf="todasLasFotos.length > 1" (click)="anterior()">❮</button>
 
       <div class="carrusel-viewport">
-        <img *ngIf="todasLasFotos[fotoActual]" [src]="todasLasFotos[fotoActual]" alt="Imagen del proyecto" />
+        <ng-container *ngIf="todasLasFotos[fotoActual].endsWith('.mp4'); else imagenTemplate">
+          <video [src]="todasLasFotos[fotoActual]" controls autoplay muted loop></video>
+        </ng-container>
+        <ng-template #imagenTemplate>
+          <img [src]="todasLasFotos[fotoActual]" [alt]="proyecto.nombre" />
+        </ng-template>
       </div>
 
       <button class="carrusel-btn next" *ngIf="todasLasFotos.length > 1" (click)="siguiente()">❯</button>
     </section>
-
   </article>
 </div>

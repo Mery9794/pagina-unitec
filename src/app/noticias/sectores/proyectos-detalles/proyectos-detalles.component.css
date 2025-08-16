@@ -1,0 +1,95 @@
+/* proyectos-detalles.component.css */
+
+/* Contenedor principal */
+.detalle-proyecto {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Título del proyecto */
+.detalle-proyecto .titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Descripción larga */
+.texto-principal {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Carrusel de fotos/videos */
+.carrusel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.carrusel-viewport {
+  max-width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrusel-viewport img,
+.carrusel-viewport video {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Botones de navegación */
+.carrusel-btn {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carrusel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carrusel-btn.prev {
+  left: 0.5rem;
+}
+
+.carrusel-btn.next {
+  right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detalle-proyecto .titulo {
+    font-size: 1.5rem;
+  }
+
+  .texto-principal {
+    font-size: 1rem;
+  }
+
+  .carrusel-viewport {
+    max-height: 300px;
+  }
+}

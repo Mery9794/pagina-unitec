@@ -13,7 +13,7 @@ export class Adaptaciones3dComponent {
   lab = {
     nombre: 'Técnicas 3D',
     descripcion: 'Espacio de diseño e impresión en 3D',
-    logo: 'assets/logos/logo-tecnicas3d.png', 
+    logo: 'assets/logos/logo-tecnicas3d1.png', 
     supervisores: ['Francisco Bustos'],
     colaboradores: [],
     queHacemos: `Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando

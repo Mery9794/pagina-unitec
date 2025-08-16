@@ -14,7 +14,7 @@ export class ArduinoComponent {
   lab = {
     nombre: 'Arduino',
     descripcion: 'Espacio de desarrollo de adaptaciones con el microcontrolador Arduino',
-    logo: 'assets/logos/logo-arduino.jpg',
+    logo: 'assets/logos/logo-arduino1.png',
     supervisores: [
       'Diego Cervantes Flores'
     ],

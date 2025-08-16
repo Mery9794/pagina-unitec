@@ -5,7 +5,7 @@
 
     <div class="lab-grid">
       <div *ngFor="let proyecto of proyectos" class="noticia-card">
-        
+
         <!-- Imagen del proyecto -->
         <div class="imagen-proyecto" *ngIf="proyecto.imagen">
           <img [src]="proyecto.imagen" [alt]="proyecto.nombre" />
@@ -23,11 +23,15 @@
           </p>
 
           <!-- Botón ver más -->
-          <div class="btn-container">
-            <a [routerLink]="['/proyectos', proyecto.id]">
+          <!--  <div class="btn-container">
+           <a [routerLink]="['/proyectos', proyecto.id]"> 
               <button class="btn-ver-mas">Ver más</button>
             </a>
+          </div> este seria cuando ande el boton ver más-->
+          <div class="btn-container">
+            <button class="btn-ver-mas" (click)="null">Ver más</button>
           </div>
+
         </div>
       </div>
     </div>
@@ -36,7 +40,7 @@
 
 <!-- GALERÍA (solo si hay items) -->
 <section class="lab-gallery" *ngIf="galeria?.length">
-  <h2>Galería de actividades</h2>
+  <h2>Galería multimedial</h2>
 
   <div class="gallery-grid">
     <div *ngFor="let item of galeria; let i = index" class="gallery-item" (click)="abrirVisor(i)">

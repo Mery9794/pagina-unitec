@@ -1,13 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-type Proyecto = {
-  id: string | number;
-  nombre: string;
-  descripcion: string;
-  imagen?: string; 
-};
+type Proyecto = { id: string | number; nombre: string; descripcion: string; imagen?: string; };
 
 @Component({
   selector: 'app-sectores',

@@ -13,7 +13,7 @@ export class LateComponent {
   lab = {
     nombre: 'LATE',
     descripcion: 'Laboratorio de Asistencia Técnica a Establecimientos de Educación Especial',
-    logo: 'assets/logos/logo-late.jpg',
+    logo: 'assets/logos/logo-late1.png',
     supervisores: [
       'Luis Ferrufino'
     ],

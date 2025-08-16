@@ -13,7 +13,7 @@ export class InfotecComponent {
   lab = {
     nombre: 'INFOTEC',
     descripcion: 'Espacio de desarrollo de aplicaciones para PcD y WebPage de UNITEC',
-    logo: 'assets/logos/logo-infotec.jpg',
+    logo: 'assets/logos/logo-infotec1.png',
     supervisores: [
       'Manuel Teves',
       'María Solange Catañeda Pariona'

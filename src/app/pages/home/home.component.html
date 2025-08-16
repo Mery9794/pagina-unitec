@@ -29,17 +29,34 @@
       <p>Contamos con 7 espacios de extensión separados conforme las distintas actividades que se realizan.</p>
 
       <div class="laboratorios-grid">
-        <!-- Tarjetas de laboratorios -->
         <ng-container *ngFor="let lab of laboratoriosCentrados; let i = index">
-          <div *ngIf="lab; else emptyCard" class="laboratorio-card" [class.selected]="i === seleccionado"
-            (click)="seleccionarLaboratorio(i)" [routerLink]="['/', lab.ruta]">
+          <div *ngIf="lab; else emptyCard" 
+               class="laboratorio-card" 
+               [class.selected]="i === seleccionado"
+               (click)="seleccionarLaboratorio(i)" 
+               [routerLink]="['/', lab.ruta]">
 
             <div class="fondo-imagen" [ngStyle]="{ 'background-image': 'url(' + lab.fondo + ')' }"></div>
 
-            <div class="contenido-nombre-logo" [class.solo-nombre]="lab.nombre && !lab.logo"
-              [class.solo-logo]="lab.logo && !lab.nombre">
+            <div class="contenido-nombre-logo" 
+                 [class.solo-nombre]="lab.nombre && !lab.logo"
+                 [class.solo-logo]="lab.logo && !lab.nombre"
+                 [class.mecatronica-layout]="lab.nombre.toLowerCase() === 'mecatronica'">
+
+              <!-- Logo -->
               <img class="logo" [src]="lab.logo" [alt]="lab.nombre" *ngIf="lab.logo" />
-              <span class="nombre-lab" *ngIf="lab.nombre">{{ lab.nombre }}</span>
+
+              <!-- Nombre -->
+              <span class="nombre-lab"
+                    [class.nombre-lab-grande]="lab.nombre.toLowerCase() === 'labtic' || lab.nombre.toLowerCase() === 'edetec'"
+                    *ngIf="lab.nombre">
+                {{ lab.nombre }}
+              </span>
+            </div>
+
+            <!-- Cartelito -->
+            <div class="cartelito-lab" *ngIf="lab.descripcion">
+              {{ lab.descripcion }}
             </div>
 
           </div>
@@ -52,7 +69,6 @@
             </div>
           </ng-template>
         </ng-container>
-
       </div>
     </div>
   </section>

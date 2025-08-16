@@ -1,31 +1,35 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { SectoresComponent } from "../../noticias/sectores/sectores.component";
+import { RouterModule } from '@angular/router';
+import { SectoresComponent } from '../../noticias/sectores/sectores.component';
+
+type Proyecto = {
+  id: string | number;
+  nombre: string;
+  descripcion: string;
+  imagen?: string;
+};
 
 @Component({
   selector: 'app-mecatronica',
   standalone: true,
   templateUrl: './mecatronica.component.html',
   styleUrls: ['./mecatronica.component.css'],
-  imports: [CommonModule, SectoresComponent]
+  imports: [CommonModule, RouterModule, SectoresComponent]
 })
-export class MecatronicaComponent {
+export class MecatronicaComponent implements OnInit {
   lab = {
     nombre: 'MECATRÓNICA',
     descripcion: 'Espacio de desarrollo de aplicaciones para la Domótica y Electromedicina',
-    logo: 'assets/logos/logo-mecatronica.jpg',
-    supervisores: [
-      'Ing. Marcelo Fernández Busse', 'Lic. José Alberto Ferreyra'
-    ],
-    colaboradores: [
-      'Juan Marcos Malanga', 'Simón López', 'Valentín Atanasof'
-    ],
-    queHacemos: ` Este espacio de extensión se dedica a la investigación y desarrollo de tecnologías aplicadas a
-     la inclusión, con foco en la integración de sistemas mecánicos, electrónicos e informáticos. Se trabaja especialmente 
-     con proyectos de domótica y electromedicina, orientados a mejorar la calidad de vida de personas con discapacidad (PcD).`,
-    objetivo: ` Investigar y aplicar las Tecnologías de la Información y la Comunicación (TIC) en el ámbito de la discapacidad,
-     mediante el diseño y desarrollo de sistemas domóticos, dispositivos de electromedicina y otras herramientas tecnológicas 
-     que favorezcan la autonomía y accesibilidad.`,
+    logo: 'assets/logos/logo-mecatronica1.png',
+    supervisores: ['Ing. Marcelo Fernández Busse', 'Lic. José Alberto Ferreyra'],
+    colaboradores: ['Juan Marcos Malanga', 'Simón López', 'Valentín Atanasof'],
+    queHacemos: `Este espacio de extensión se dedica a la investigación y desarrollo de tecnologías aplicadas a
+      la inclusión, con foco en la integración de sistemas mecánicos, electrónicos e informáticos. Se trabaja especialmente 
+      con proyectos de domótica y electromedicina, orientados a mejorar la calidad de vida de personas con discapacidad (PcD).`,
+    objetivo: `Investigar y aplicar las Tecnologías de la Información y la Comunicación (TIC) en el ámbito de la discapacidad,
+      mediante el diseño y desarrollo de sistemas domóticos, dispositivos de electromedicina y otras herramientas tecnológicas 
+      que favorezcan la autonomía y accesibilidad.`
   };
 
   galeriaMecatronica = [
@@ -34,11 +38,13 @@ export class MecatronicaComponent {
     { imagen: 'assets/img/mecatronica/videoMecatronica.mp4', descripcion: 'Cortina funcionando' }
   ];
 
-  proyectosMecatronica = [
-
+  proyectosMecatronica: Proyecto[] = [
+    { id: 1, nombre: 'Electromedicina', descripcion: 'Proyecto que nació ante la necesidad de dar respuesta en situaciones de emergía sanitaria como la vivida durante la pandemia de COVID 2020. Esta herramienta, destinada a los profesionales de la salud, permite monitorear y registrar, de forma remota, los signos vitales de pacientes aislados mediante sensores y almacenando los datos en la nube para ser accedidos en tiempo real, permitiendo obtener un diagnóstico preciso, rápido y eficiente de la situación de emergencia y de los pacientes en particular,  sin temor a un posible contagio.', imagen: 'assets/proyectos/electromedicina.jpg' },
+    { id: 2, nombre: 'Casa Aumentada', descripcion: 'Una casa adaptada es aquella que está diseñada para ser accesible y funcional a personas con algún tipo de discapacidad asociada. En este sentido, hemos reformulado este concepto definiéndola como un ecosistema donde conviven un conjunto de principios, técnicas, herramientas tecnológicas, módulos y sistemas interconectados que, de manera cooperativa, permiten adecuar el entorno físico, en lo accesible y funcional, de una persona con alguna discapacidad asociada, de acuerdo a sus requerimientos, permitiéndole lograr un grado de autonomía tal que pueda desenvolverse lo más independientemente posible sin la asistencia de otras personas.', imagen: 'assets/proyectos/realidad-aumentada.jpg' },
+    { id: 3, nombre: 'Adaptación de Terminales', descripcion: 'Articulando sus tareas con LATE, el espacio de trabajo e investigación LabTIC se encarga de adecuar y adaptar equipos informáticos, mediante la instalación de programas informáticos especializados. Estos pueden ser herramientas de accesibilidad tales como lectores de pantallas, teclados virtuales, sistemas aumentativos y alternativos de comunicación, emuladores de mouse, entre otros;  o de apoyo en la intervención de personas con discapacidad intelectual, cognitiva, sensorial o motora.', imagen: 'assets/proyectos/proyecto-x.jpg' }
   ];
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-}  
+}

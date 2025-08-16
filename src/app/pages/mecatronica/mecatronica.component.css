@@ -8,14 +8,13 @@
 
 /* Sección Hero */
 .lab-hero {
-  background-image: url('/assets/img/img2.jpg');
+  background-image: url('/assets/img/portada1.jpg');
   background-size: cover;
   color: var(--text-light);
   text-align: center;
   display: flex;
   justify-content: flex-start;
   min-height: 100px;
-  border-bottom: 4px solid #b0c1e5;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,9 +23,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 65px;
+  margin-top: 35px;
   margin-left: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   gap: 20px;
 }
 
@@ -45,13 +44,13 @@
 .lab-hero-title h1 {
   font-size: 2.4rem;
   margin: 0;
-  color: #5b81b0;
+  color: #ffffff;
 }
 
 .lab-hero-content p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #747474;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -166,65 +165,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 20px 10px;
+    text-align: center;
+    background-position: center top; /* para que la imagen se vea bien en móvil */
   }
 
   .lab-hero-content {
-    margin: 20px 0 0 0;
-    align-items: center;
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .lab-hero-title {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
   }
 
-  .lab-hero-title h1 {
-    font-size: 1.7rem;
+  /* Sección título y logo en fila */
+  .lab-hero-title {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 8px;
+    text-align: left;
   }
 
   .lab-hero-logo {
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
   }
 
-  .lab-content-grid {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
+  .lab-hero-title h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 1.2;
   }
 
-  .lab-info-card,
-  .lab-members-card {
-    padding: 20px;
-    order: unset;
-  }
-
-  .lab-info-card h2,
-  .lab-members-card h2,
-  .lab-downloads h2 {
-    font-size: 1.5rem;
-  }
-
-  .lab-info-card p,
-  .lab-members-card li {
+  /* Descripción debajo ocupando ancho completo */
+  .lab-hero-description {
     font-size: 0.95rem;
-  }
-
-  .lab-downloads-section {
-    padding: 20px;
-  }
-
-  .lab-downloads-section h2 {
-    font-size: 1.3rem;
-  }
-
-  .lab-downloads-section p,
-  .lab-download-list a {
-    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    max-width: 100%;
+    text-align: left;
   }
 }
-

@@ -1,43 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ProyectosService } from '../../services/proyectos.service';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { ProyectosService, Proyecto } from '../../services/proyectos.service';
 
 @Component({
   selector: 'app-proyectos-detalles',
   standalone: true,
-  imports: [
-    CommonModule, 
-    RouterModule    
-  ],
+  imports: [CommonModule, RouterModule],
   templateUrl: './proyectos-detalles.component.html',
-  styleUrl: './proyectos-detalles.component.css'
+  styleUrls: ['./proyectos-detalles.component.css']
 })
 export class ProyectosDetallesComponent implements OnInit {
-  proyecto: any;
+  proyecto?: Proyecto;
+  fotoActual: number = 0;
   todasLasFotos: string[] = [];
-  fotoActual = 0;
 
   constructor(
     private route: ActivatedRoute,
-    private proyectoService: ProyectosService
+    private proyectosService: ProyectosService
   ) {}
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id') ?? ''; 
-    this.proyecto = this.proyectoService.getProyectoById(id);
-
-    if (this.proyecto?.fotos) {
-      this.todasLasFotos = this.proyecto.fotos;
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      const encontrado = this.proyectosService.getProyectoById(id);
+      if (encontrado) {
+        this.proyecto = encontrado;
+        this.todasLasFotos = encontrado.fotos?.map(f => f.imagen) ?? [];
+      }
     }
-  }
-
-  anterior() {
-    this.fotoActual = (this.fotoActual - 1 + this.todasLasFotos.length) % this.todasLasFotos.length;
   }
 
   siguiente() {
     this.fotoActual = (this.fotoActual + 1) % this.todasLasFotos.length;
+  }
+
+  anterior() {
+    this.fotoActual = (this.fotoActual - 1 + this.todasLasFotos.length) % this.todasLasFotos.length;
   }
 }

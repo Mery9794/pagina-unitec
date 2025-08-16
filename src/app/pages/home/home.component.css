@@ -68,7 +68,7 @@
 .laboratorio-card {
   position: relative;
   width: 330px;
-  height: 115px;
+  height: 155px;
   cursor: pointer;
   border-radius: 3px;
   overflow: hidden;
@@ -87,6 +87,7 @@
   background-size: cover;
   background-position: center;
   z-index: 0;
+  bottom: 3px;
 }
 
 .fondo-imagen::before {
@@ -109,14 +110,6 @@
 .laboratorio-card:not(.vacia):hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Estado hover */
-.laboratorio-card:hover,
-.laboratorio-card.selected {
-  transform: scale(1.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .laboratorio-card .fondo {
@@ -158,7 +151,8 @@
   text-align: center;
 }
 
-.contenido-nombre-logo.solo-nombre, .contenido-nombre-logo.solo-logo {
+.contenido-nombre-logo.solo-nombre,
+.contenido-nombre-logo.solo-logo {
   justify-content: center;
 }
 
@@ -225,4 +219,55 @@
   .logo {
     width: 80px;
   }
+}
+
+.cartelito-lab {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.85rem;
+  padding-top: 2px;
+  padding-right: 6px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.laboratorio-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.laboratorio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logos un poco más grandes */
+.logo {
+  width: 100px;
+  height: auto;
+  padding-bottom: 22px;
+}
+
+/* Nombre grande para LABTIC y EDETEC */
+.nombre-lab-grande {
+  font-size: 45px;
+}
+
+/* Mecatrónica: nombre y logo al costado */
+.mecatronica-layout {
+  flex-direction: row;
+  align-items: center;
+  justify-content: normal;
 }

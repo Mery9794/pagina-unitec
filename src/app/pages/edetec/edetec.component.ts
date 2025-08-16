@@ -13,7 +13,7 @@ export class EdetecComponent {
   lab = {
     nombre: 'EDETEC',
     descripcion: 'Espacio de Desarrollos Tecnológicos',
-    logo: 'assets/logos/logo-edetec.jpg',
+    logo: 'assets/logos/logo-edetec1.png',
     supervisores: [
       'Felipe Simonetti'
     ],

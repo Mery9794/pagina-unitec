@@ -13,7 +13,7 @@ export class LabticComponent {
   lab = {
     nombre: 'LabTic',
     descripcion: 'Espacio de desarrollo de Hardware y Software con orientación al uso de TICs',
-    logo: 'assets/logos/logo-labtic.jpg',
+    logo: 'assets/logos/logo-labtic1.png',
     supervisores: [
       'Ing. Marcelo Fernández Busse',
       'Lic. José Alberto Ferreyra'

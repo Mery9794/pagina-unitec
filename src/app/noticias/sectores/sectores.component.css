@@ -171,11 +171,11 @@
 
 /* Botón ver más */
 .btn-container {
-  text-align: center;
+      text-align: right;
 }
 
 .btn-ver-mas {
-  background-color: #007bff;
+  background-color: #ff7300;
   border: none;
   color: white;
   font-weight: 600;
@@ -186,5 +186,5 @@
 }
 
 .btn-ver-mas:hover {
-  background-color: #0056b3;
+  background-color: #a14e0a;
 }

@@ -8,3 +8,4 @@ export interface Noticia {
   fotos: string[];
   linkFacebook?: string;
 }
+
