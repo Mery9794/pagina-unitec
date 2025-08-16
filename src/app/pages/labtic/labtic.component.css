@@ -167,7 +167,7 @@
     justify-content: center;
     padding: 20px 10px;
     text-align: center;
-    background-position: center top; /* para que la imagen se vea bien en móvil */
+    background-position: center top;  
   }
 
   .lab-hero-content {
@@ -178,8 +178,7 @@
     margin: 0;
     padding: 0;
   }
-
-  /* Sección título y logo en fila */
+ 
   .lab-hero-title {
     display: flex;
     flex-direction: row; 
@@ -199,8 +198,7 @@
     margin: 0;
     line-height: 1.2;
   }
-
-  /* Descripción debajo ocupando ancho completo */
+ 
   .lab-hero-description {
     font-size: 0.95rem;
     line-height: 1.4;
