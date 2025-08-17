@@ -1,4 +1,3 @@
-/* Estilos base */
 .home-container {
   max-width: 1200px;
   margin: auto;
@@ -198,6 +197,16 @@
   max-height: 60px;
 }
 
+@media (max-width: 1100px) {
+  .laboratorios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .laboratorio-card.vacia {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .laboratorios-grid {
     grid-template-columns: 1fr;
@@ -218,6 +227,10 @@
 
   .logo {
     width: 80px;
+  }
+
+  .laboratorio-card.vacia {
+    display: none;
   }
 }
 
