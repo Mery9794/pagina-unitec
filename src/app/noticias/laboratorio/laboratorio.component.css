@@ -48,7 +48,7 @@
 }
 
 .btn-ver-mas {
-  background-color: #3498db;
+  background-color: #ff7300;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -58,7 +58,7 @@
 }
 
 .btn-ver-mas:hover {
-  background-color: #2a6079;
+  background-color: #703b0f;
 }
 
 .noticias-container {
