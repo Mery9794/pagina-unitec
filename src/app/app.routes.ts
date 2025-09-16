@@ -10,8 +10,7 @@ import { ProgresarComponent } from './noticias/becas/progresar/progresar.compone
 import { BelgranoComponent } from './noticias/becas/belgrano/belgrano.component';
 import { NoticiaDetalleComponent } from './noticias/laboratorio/noticia-detalle/noticia-detalle.component';
 import { ArduinoComponent } from './pages/arduino/arduino.component';
-import { SectoresComponent } from './noticias/sectores/sectores.component';
-import { ProyectosDetallesComponent } from './noticias/sectores/proyectos-detalles/proyectos-detalles.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,9 +23,9 @@ export const routes: Routes = [
   { path: 'mecatronica', component: MecatronicaComponent },
   { path: 'progresar', component: ProgresarComponent },
   { path: 'belgrano', component: BelgranoComponent },
-  
   { path: 'noticias/:id', component: NoticiaDetalleComponent },
-   { path: 'proyectos/:id', component: ProyectosDetallesComponent },
+
+  { path: 'proyectos/mecatronica/3', loadComponent: () => import('./proyectos/mecatronica/terminales/terminales.component').then(m => m.TerminalesProyectoComponent) },
 
 
   { path: '**', redirectTo: '' }

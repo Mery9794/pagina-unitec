@@ -1,0 +1,107 @@
+<!-- Hero del laboratorio -->
+<section class="lab-hero">
+    <div class="lab-hero-content">
+        <div class="lab-hero-title">
+            <img [src]="lab.logo" alt="Logo {{ lab.nombre }}" class="lab-hero-logo" />
+            <h1>{{ lab.nombre }}</h1>
+        </div>
+        <p>{{ lab.descripcion }}</p>
+    </div>
+</section>
+
+<!-- Info -->
+<section class="lab-content-grid">
+    <div class="lab-info-card">
+        <h2>¿Qué hacemos?</h2>
+        <p>{{ lab.queHacemos }}</p>
+        <h3>Objetivo</h3>
+        <p>{{ lab.objetivo }}</p>
+    </div>
+
+</section>
+
+<!-- PROYECTOS -->
+<section class="proyectos" *ngIf="proyectos?.length">
+    <div class="noticias-container">
+        <h2 class="h2">Proyectos</h2>
+
+        <div class="lab-grid">
+            <div *ngFor="let proyecto of proyectos" class="noticia-card">
+
+                <!-- Imagen del proyecto -->
+                <div class="imagen-proyecto" *ngIf="proyecto.imagen">
+                    <img [src]="proyecto.imagen" [alt]="proyecto.nombre" />
+                </div>
+
+                <!-- Nombre -->
+                <h3 class="titulo-noticia">
+                    {{ proyecto.nombre }}
+                </h3>
+
+                <!-- Descripción corta -->
+                <div class="contenido">
+                    <p class="info-noticia">
+                        {{ proyecto.descripcion }}
+                    </p>
+
+                    <!-- Botón ver más -->
+                    <div class="btn-container">
+                        <a [routerLink]="['/proyectos', lab.sector, proyecto.id]">
+                            <button class="btn-ver-mas">Ver más</button>
+                        </a>
+
+                    </div>
+                    <!--  este seria cuando el boton ver más lo cancelamos  
+            <div class="btn-container">
+            <button class="btn-ver-mas" (click)="null">Ver más</button>
+          </div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA (solo si hay items) -->
+<section class="pasos-gallery" *ngIf="flatItems.length">
+    <div class="pg-header">
+        <h3>Galería multimedial</h3>
+    </div>
+
+    <div class="pg-viewport">
+        <button class="pg-btn prev" *ngIf="pages.length > 1" (click)="prevGrupo()" [disabled]="!canPrev"
+            aria-label="Anterior">❮</button>
+
+        <div class="pg-grid">
+            <figure class="pg-item" *ngFor="let it of pages[pageIdx]; let i = index" (click)="abrirVisor(i)">
+                <ng-container *ngIf="esVideo(it.src); else imgTpl">
+                    <video [src]="it.src" muted autoplay loop playsinline></video>
+                </ng-container>
+                <ng-template #imgTpl>
+                    <img [src]="it.src" [alt]="it.alt || 'Imagen'" />
+                </ng-template>
+                <figcaption *ngIf="it.alt">{{ it.alt }}</figcaption>
+            </figure>
+        </div>
+
+        <button class="pg-btn next" *ngIf="pages.length > 1" (click)="nextGrupo()" [disabled]="!canNext"
+            aria-label="Siguiente">❯</button>
+    </div>
+</section>
+
+<!-- VISOR (modal) -->
+<div class="visor-overlay" *ngIf="visorAbierto" (click)="cerrarVisor()">
+    <div class="visor-contenido" (click)="$event.stopPropagation()">
+        <button class="nav-btn" (click)="anterior()" [disabled]="visorIndiceGlobal === 0">‹</button>
+
+        <ng-container *ngIf="esVideo(flatItems[visorIndiceGlobal].src); else imgFull">
+            <video [src]="flatItems[visorIndiceGlobal].src" controls autoplay></video>
+        </ng-container>
+        <ng-template #imgFull>
+            <img [src]="flatItems[visorIndiceGlobal].src" [alt]="flatItems[visorIndiceGlobal].alt || 'Imagen'" />
+        </ng-template>
+
+
+        <button class="nav-btn" (click)="siguiente()" [disabled]="visorIndiceGlobal === flatItems.length - 1">›</button>
+    </div>
+</div>

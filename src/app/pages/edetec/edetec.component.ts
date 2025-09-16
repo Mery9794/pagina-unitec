@@ -1,15 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { SectoresComponent } from "../../noticias/sectores/sectores.component";
+import { Component, OnInit } from '@angular/core';
+import { LabsComponent } from '../labs/labs.component'; // <-- el genérico
+
+type Proyecto = { id: string | number; nombre: string; descripcion: string; imagen?: string; };
+
 
 @Component({
   selector: 'app-edetec',
   standalone: true,
   templateUrl: './edetec.component.html',
-  styleUrls: ['./edetec.component.css'],
-  imports: [CommonModule, SectoresComponent]
+  imports: [LabsComponent]
 })
-export class EdetecComponent {
+export class EdetecComponent implements OnInit {
+
   lab = {
     nombre: 'EDETEC',
     descripcion: 'Espacio de Desarrollos Tecnológicos',
@@ -25,16 +27,17 @@ export class EdetecComponent {
        su participación en diferentes ámbitos. `,
     objetivo: ` Crear y adaptar dispositivos tecnológicos como teclados y mouses, juguetes,
        comunicadores pictográficos, interruptores de impacto; entre otros, respondiendo a las necesidades 
-       específicas o patologia de cada persona o institución.`
+       específicas o patologia de cada persona o institución.`,
+    sector: 'edetec'
   };
 
-  galeriaEdetec = [
+  galeria = [
     { imagen: 'assets/img/edetec/edetec1.jpg', descripcion: 'Mesa de trabajo' },
     { imagen: 'assets/img/edetec/edetec2.jpg', descripcion: 'Herramientas y prototipos' }
   ];
-  proyectosEdetec= [
-    
-  ];
+
+  proyectos: Proyecto[] = [];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

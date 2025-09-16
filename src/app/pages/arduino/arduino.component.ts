@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { SectoresComponent } from "../../noticias/sectores/sectores.component";
+import { Component, OnInit } from '@angular/core';
+import { LabsComponent } from '../labs/labs.component'; // <-- el genérico
+
+type Proyecto = { id: string | number; nombre: string; descripcion: string; imagen?: string; };
 
 @Component({
   selector: 'app-arduino',
   standalone: true,
   templateUrl: './arduino.component.html',
-  styleUrls: ['./arduino.component.css'],
-  imports: [CommonModule, SectoresComponent]
+  imports: [LabsComponent]
 })
 
-export class ArduinoComponent {
+export class ArduinoComponent implements OnInit {
+
   lab = {
     nombre: 'Arduino',
     descripcion: 'Espacio de desarrollo de adaptaciones con el microcontrolador Arduino',
@@ -24,15 +25,15 @@ export class ArduinoComponent {
     queHacemos: `  En este espacio de extensión se desarrollan dispositivos tecnológicos accesibles mediante el uso del
      microcontrolador Arduino, orientados a mejorar la calidad de vida de personas con discapacidad (PcD). `,
     objetivo: ` Investigar, diseñar y desarrollar rampas tecnológicas accesibles utilizando Arduino, con el fin de promover la 
-    inclusión y participación activa de PcD en distintos contextos sociales, educativos y cotidianos.`
+    inclusión y participación activa de PcD en distintos contextos sociales, educativos y cotidianos.`,
+    sector: 'arduino'
   };
 
-  galeriaArduino = [
-    { imagen: 'assets/img/', descripcion: '' }
+  galeria = [
   ];
-    proyectosArduino = [
-    
-  ];
+
+  proyectos: Proyecto[] = [];
+
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

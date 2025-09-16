@@ -1,0 +1,100 @@
+<div class="detalle-proyecto" *ngIf="proyecto as p">
+  <article class="proyecto-contenido">
+    <h2 class="titulo">{{ p.nombre }}</h2>
+
+    <!-- Intro -->
+    <section class="texto-principal" *ngIf="p.introParrafos?.length">
+      <p *ngFor="let par of p.introParrafos">{{ par }}</p>
+    </section>
+
+    <!-- Tipos -->
+    <section class="tipos" *ngIf="p.tipos">
+      <h3>{{ p.tipos.titulo }}</h3>
+      <p class="tipos-desc">{{ p.tipos.descripcion }}</p>
+
+      <div class="tipos-grid">
+        <ul class="tipos-lista">
+          <li *ngFor="let it of p.tipos.items">
+            <strong>{{ it.label }}</strong>: {{ it.texto }}
+          </li>
+        </ul>
+
+        <div class="tipos-imagen" *ngIf="p.tipos.imagen">
+          <img [src]="p.tipos.imagen" alt="Tipos de discapacidad" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pasos intercalados -->
+    <section class="pasos" *ngIf="p.pasos?.length">
+      <h3 *ngIf="p.pasosTitulo">{{ p.pasosTitulo }}</h3>
+      <p class="pasos-desc" *ngIf="p.pasosDescripcion">{{ p.pasosDescripcion }}</p>
+
+      <div class="paso" *ngFor="let step of p.pasos; let i = index" [class.right]="i % 2 === 1">
+        <div class="paso-media" *ngIf="step.imagen">
+          <img [src]="step.imagen" alt="" />
+        </div>
+
+        <div class="paso-texto">
+          <h4>{{ step.titulo }}</h4>
+          <p>{{ step.texto }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software AA -->
+    <section class="softwareaa" *ngIf="p.softwareAA">
+      <h3>Acerca del Software Asistivo y Adaptativo</h3>
+      <p>{{ p.softwareAA.intro }}</p>
+      <p>{{ p.softwareAA.intro2 }}</p>
+      <p>{{ p.softwareAA.asistivo }}</p>
+      <p>{{ p.softwareAA.adaptativo }}</p>
+
+      <ul class="software-lista">
+        <li *ngFor="let item of p.softwareAA.lista">{{ item }}</li>
+      </ul>
+
+      <p class="glosario" *ngIf="p.softwareAA.glosario">{{ p.softwareAA.glosario }}</p>
+    </section>
+  </article>
+</div>
+
+<!-- GALERÍA -->
+<section class="pasos-gallery" *ngIf="pages.length">
+  <div class="pg-header"><h3>Galería multimedial</h3></div>
+
+  <div class="pg-viewport">
+    <button class="pg-btn prev" *ngIf="pages.length > 1"
+            (click)="prevGrupo()" [disabled]="!canPrev" aria-label="Anterior">❮</button>
+
+    <div class="pg-grid">
+      <figure class="pg-item" *ngFor="let it of pages[pageIdx]; let i = index"
+              (click)="abrirVisor(i)" title="Ver">
+        <img [src]="it.src" [alt]="it.alt || 'Imagen del proceso'"/>
+        <figcaption *ngIf="it.alt">{{ it.alt }}</figcaption>
+      </figure>
+    </div>
+
+    <button class="pg-btn next" *ngIf="pages.length > 1"
+            (click)="nextGrupo()" [disabled]="!canNext" aria-label="Siguiente">❯</button>
+  </div>
+</section>
+
+<!-- VISOR (modal) -->
+<div class="visor-overlay" *ngIf="visorAbierto" (click)="cerrarVisor()">
+  <div class="visor-contenido" (click)="$event.stopPropagation()">
+    <button class="nav-btn" (click)="anterior()" [disabled]="visorIndiceGlobal === 0">‹</button>
+
+    <figure style="margin:0">
+      <img [src]="flatItems[visorIndiceGlobal].src"
+           [alt]="flatItems[visorIndiceGlobal].alt || 'Imagen del proceso'"/>
+      <figcaption *ngIf="flatItems[visorIndiceGlobal].alt"
+                  style="color:#fff; text-align:center; margin-top:8px;">
+        {{ flatItems[visorIndiceGlobal].alt }}
+      </figcaption>
+    </figure>
+
+    <button class="nav-btn" (click)="siguiente()"
+            [disabled]="visorIndiceGlobal === flatItems.length - 1">›</button>
+  </div>
+</div>
