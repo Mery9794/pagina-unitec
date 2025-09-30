@@ -193,8 +193,8 @@
 }
 
 .laboratorio-card.vacia .logo {
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 70px;
+  max-height: 80px;
 }
 
 @media (max-width: 1100px) {

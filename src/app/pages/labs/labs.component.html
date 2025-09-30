@@ -80,6 +80,7 @@
                 <ng-template #imgTpl>
                     <img [src]="it.src" [alt]="it.alt || 'Imagen'" />
                 </ng-template>
+
                 <figcaption *ngIf="it.alt">{{ it.alt }}</figcaption>
             </figure>
         </div>
@@ -94,13 +95,18 @@
     <div class="visor-contenido" (click)="$event.stopPropagation()">
         <button class="nav-btn" (click)="anterior()" [disabled]="visorIndiceGlobal === 0">‹</button>
 
-        <ng-container *ngIf="esVideo(flatItems[visorIndiceGlobal].src); else imgFull">
-            <video [src]="flatItems[visorIndiceGlobal].src" controls autoplay></video>
-        </ng-container>
-        <ng-template #imgFull>
-            <img [src]="flatItems[visorIndiceGlobal].src" [alt]="flatItems[visorIndiceGlobal].alt || 'Imagen'" />
-        </ng-template>
+        <figure style="margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <ng-container *ngIf="esVideo(flatItems[visorIndiceGlobal].src); else imgFull">
+                <video [src]="flatItems[visorIndiceGlobal].src" controls autoplay></video>
+            </ng-container>
+            <ng-template #imgFull>
+                <img [src]="flatItems[visorIndiceGlobal].src" [alt]="flatItems[visorIndiceGlobal].alt || 'Imagen'" />
+            </ng-template>
 
+            <figcaption *ngIf="flatItems[visorIndiceGlobal].alt" style="color:#fff; text-align:center; margin-top:8px;">
+                {{ flatItems[visorIndiceGlobal].alt }}
+            </figcaption>
+        </figure>
 
         <button class="nav-btn" (click)="siguiente()" [disabled]="visorIndiceGlobal === flatItems.length - 1">›</button>
     </div>

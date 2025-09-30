@@ -85,7 +85,7 @@
   <div class="visor-contenido" (click)="$event.stopPropagation()">
     <button class="nav-btn" (click)="anterior()" [disabled]="visorIndiceGlobal === 0">‹</button>
 
-    <figure style="margin:0">
+    <figure style="margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <img [src]="flatItems[visorIndiceGlobal].src"
            [alt]="flatItems[visorIndiceGlobal].alt || 'Imagen del proceso'"/>
       <figcaption *ngIf="flatItems[visorIndiceGlobal].alt"

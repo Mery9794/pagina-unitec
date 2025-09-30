@@ -61,4 +61,4 @@ export class LabsComponent {
   cerrarVisor() { this.visorAbierto = false; }
   anterior() { if (this.visorIndiceGlobal > 0) this.visorIndiceGlobal--; }
   siguiente() { if (this.visorIndiceGlobal < this.flatItems.length - 1) this.visorIndiceGlobal++; }
-}
+} 
