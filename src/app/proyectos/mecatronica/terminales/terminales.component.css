@@ -1,13 +1,13 @@
 :root {
   --primary: #3498db;
-  --text: #333;
+  --text: #000000;
   --bg-soft: #f6f6f6;
 }
 
 .detalle-proyecto {
   padding: 30px 30px 0;
   margin: 2rem auto;
-  color: var(--text);
+  color:  #1e1e1e;
 }
 
 .proyecto-contenido {
@@ -26,7 +26,7 @@
 /* ====== Título ====== */
 .titulo {
   width: 100%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin: 0 0 .5rem;
   text-align: center;
@@ -40,7 +40,8 @@
   margin-top: 0.5rem;
   margin-right: 0px;
   margin-left: 0px;
-  font-size: 1.075rem;
+  font-size: 1rem;
+  padding: 16px;
 }
 
 
@@ -118,20 +119,19 @@
 
 .tipos h3 {
   margin: 0 0 .4rem;
-  font-size: 1.25rem;
+  font-size: 1.8rem;
 }
 
 .tipos-desc {
   margin: 0 0 1rem;
   line-height: 1.6;
-  color: #444;
+  color: #000000;
 }
 
 .tipos-lista {
   margin: 0;
   padding-left: 1.1rem;
-  /* viñetas */
-}
+  }
 
 .tipos-lista li {
   margin: .35rem 0;
@@ -156,16 +156,17 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 16px;
 }
 
 .pasos h3 {
   margin: .5rem 0 .25rem;
-  font-size: 1.35rem;
+  font-size: 1.8rem;
 }
 
 .pasos-desc {
   margin-bottom: .8rem;
-  color: #444;
+  color: #000000;
 }
 
 .paso {
@@ -198,7 +199,7 @@
 .paso-texto h4 {
   margin: 0 0 6px;
   font-size: 1.05rem;
-  color: #222;
+  color: #000000;
 }
 
 .paso-texto p {
@@ -232,6 +233,7 @@
 
 .softwareaa h3 {
   margin: 0 0 .4rem;
+  font-size: 1.8rem;
 }
 
 .softwareaa p {
@@ -315,7 +317,7 @@
 
 .pg-header h3 {
   margin: 0 0 12px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #1e1e1e
 }
 
@@ -399,9 +401,9 @@
   background: #000;
   padding: 10px;
   border-radius: 12px;
-  display: flex;              /* ✅ activar flex */
-  flex-direction: column;     /* ✅ media + caption en columna */
-  justify-content: center;    /* ✅ centrar vertical */
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
   align-items: center;  
 }
 
