@@ -21,9 +21,9 @@ export class Adaptaciones3dComponent implements OnInit {
     colaboradores: [
 
     ],
-    queHacemos: `  Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando
-      impresión 3D. Se realizan piezas de repuesto para impresoras, adaptaciones como switches accesibles
-      y otros dispositivos solicitados por los otros espacios de extensión. `,
+    queHacemos: `  Este espacio de extensión está dedicado al diseño y fabricación de soluciones accesibles utilizando impresoras 3D, 
+    CNC y Scanner 3D. Se realizan piezas de repuesto, fabricación de switches y otros dispositivos a requerimiento de los otros espacios
+    de extensión. `,
     objetivo: ` Brindar soporte técnico y creativo mediante tecnologías de fabricación digital, promover la inclusión respondiendo a las necesidades de otros espacios de extensión, desarrollar piezas personalizadas impresas en 3D.`,
     sector: 'tecnica3d'
   };

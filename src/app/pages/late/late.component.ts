@@ -16,9 +16,8 @@ export class LateComponent implements OnInit {
     logo: 'assets/logos/logo-late1.png',
     supervisores: ['Luis Ferrufino'],
     colaboradores: ['Daniel Alejandro Fernández', 'Valentín Diego González'],
-    queHacemos: `LATE es un espacio de extensión dedicado a brindar asistencia técnica a establecimientos de 
-      educación especial. Aquí se reacondicionan computadoras, notebooks, monitores y periféricos
-      donados por la comunidad.`,
+    queHacemos: `Es un espacio de extensión dedicado a brindar asistencia técnica a Personas con Discapacidad, 
+    a través de la adaptación de computadoras, notebooks, monitores y periféricos donados por la comunidad.`,
     objetivo: `Reacondicionar equipamiento informático para ser entregado a escuelas de educación especial,
        organismos, instituciones y personas que lo necesiten, promoviendo la inclusión digital y el 
        acceso a la tecnología.`,
