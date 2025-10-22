@@ -33,8 +33,9 @@ export class LabticComponent implements OnInit {
 
   galeria = [];
 
-  proyectos: Proyecto[] = [];
-
+  proyectos: Proyecto[] = [
+    { id: 3, nombre: 'Adaptación de Terminales', descripcion: 'Articulando sus tareas con LATE, el espacio de trabajo e investigación LabTIC se encarga de adecuar y adaptar equipos informáticos, mediante la instalación de programas informáticos especializados. Estos pueden ser herramientas de accesibilidad tales como lectores de pantallas, teclados virtuales, sistemas aumentativos y alternativos de comunicación, emuladores de mouse, entre otros;  o de apoyo en la intervención de personas con discapacidad intelectual, cognitiva, sensorial o motora.', imagen: 'assets/proyectos/terminales.png' }
+  ];
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

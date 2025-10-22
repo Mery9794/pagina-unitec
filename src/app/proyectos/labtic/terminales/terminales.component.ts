@@ -31,7 +31,7 @@ export class TerminalesProyectoComponent implements OnInit {
     id: '3',
     nombre: 'Adaptación de Terminales',
     sector: 'mecatronica',
-
+ 
     introParrafos: [
       'Hoy en día, la sociedad se enfrenta a desafíos cada vez más significativos, muchos de los cuales pueden ser abordados mediante el uso de las nuevas herramientas como son las Tecnologías de La Información y la Comunicación (TIC). Estas, facilitan las tareas diarias de las personas desde lo laboral hasta lo doméstico. Pasando por el entretenimiento, cuestiones administrativas, educación, salud y comunicación, entre otras.',
       'Las universidades, como parte del entretejido social, no son ajenas a esta realidad. En este sentido, desde el espacio de UNITEC venimos desarrollando diferentes proyectos vinculados a la incorporación de las tecnologías en aquellos sectores más vulnerables de la comunidad.',

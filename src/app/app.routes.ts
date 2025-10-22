@@ -25,7 +25,7 @@ export const routes: Routes = [
   { path: 'belgrano', component: BelgranoComponent },
   { path: 'noticias/:id', component: NoticiaDetalleComponent },
 
-  { path: 'proyectos/mecatronica/3', loadComponent: () => import('./proyectos/mecatronica/terminales/terminales.component').then(m => m.TerminalesProyectoComponent) },
+  { path: 'proyectos/labtic/3', loadComponent: () => import('./proyectos/labtic/terminales/terminales.component').then(m => m.TerminalesProyectoComponent) },
 
 
   { path: '**', redirectTo: '' }
