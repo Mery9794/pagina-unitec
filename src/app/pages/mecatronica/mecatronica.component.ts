@@ -30,9 +30,10 @@ export class MecatronicaComponent implements OnInit {
   ];
 
   proyectos: Proyecto[] = [
-    { id: 1, nombre: 'Biomedicina', descripcion: 'Proyecto que nació ante la necesidad de dar respuesta en situaciones de emergías sanitarias como la vivida durante la pandemia de COVID 2020. Esta herramienta, destinada a los profesionales de la salud, permite monitorear y registrar, de forma remota, los signos vitales de pacientes mediante sensores, almacenando los datos en la nube para ser accedidos en tiempo real, permitiendo obtener un diagnóstico preciso, rápido y eficiente de la situación de emergencia y de los pacientes en particular,  sin temor a un posible contagio.', imagen: 'assets/proyectos/electromedicina.jpg' },
+    { id: 1, nombre: 'Biomedicina', descripcion: 'Proyecto que nació ante la necesidad de dar respuesta en situaciones de emergencias sanitarias como la vivida durante la pandemia de COVID 2020. Esta destinado a pacientes aislados, con internación domiciliaria u hospitalizados, o imposibilitados de asistir a una sala médica por alguna discapacidad. Este sistema permite tomar distintos datos fisiologicos del paciente y ser visualizados en tiempo real.', imagen: 'assets/proyectos/electromedicina.jpg' },
     { id: 2, nombre: 'Casa Adaptada', descripcion: 'Nuestra visión de Casa Adaptada se centra en el concepto de un ecosistema donde conviven un conjunto de sistemas, técnicas, diseños y herramientas tecnológicas interconectadas entre sí, que posibilita la adecuación del entorno físico, en lo accesible y funcional, de una persona con discapacidad, de acuerdo a sus requerimientos, permitiéndole desenvolverse de manera autónoma sin la necesidad de la asistencia de otras personas.', imagen: 'assets/proyectos/casa-adaptada.jpg' },
-    ];
+    { id: 4, nombre: 'Kit Arduino Educativo', descripcion: '.', imagen: 'assets/proyectos/KIT-Educativo.jpg' }
+  ];
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
