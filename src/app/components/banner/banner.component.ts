@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-banner',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './banner.component.html', 
+  templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
@@ -19,16 +19,16 @@ export class BannerComponent {
       descripcion: ' '
     },
     {
-      imagen: 'assets/img/progresar.jpg',
-       ruta: '/progresar'
+      imagen: 'assets/img/maqueta3d.png',
+      ruta: '/casa-3d'
     },
     {
-      imagen: 'assets/img/belgrano.jpg', 
+      imagen: 'assets/img/belgrano.jpg',
       ruta: '/belgrano'
     },
-     {
-      imagen: 'assets/img/maqueta3d.png', 
-      ruta: '/casa-3d'
+    {
+      imagen: 'assets/img/progresar.jpg',
+      ruta: '/progresar'
     }
   ];
 
