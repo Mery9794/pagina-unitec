@@ -10,6 +10,7 @@ import { ProgresarComponent } from './noticias/becas/progresar/progresar.compone
 import { BelgranoComponent } from './noticias/becas/belgrano/belgrano.component';
 import { NoticiaDetalleComponent } from './noticias/laboratorio/noticia-detalle/noticia-detalle.component';
 import { ArduinoComponent } from './pages/arduino/arduino.component';
+import { CasaAdaptadaComponent } from './proyectos/mecatronica/casa-adaptada/casa-adaptada.component';
 
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'progresar', component: ProgresarComponent },
   { path: 'belgrano', component: BelgranoComponent },
   { path: 'noticias/:id', component: NoticiaDetalleComponent },
+  { path: 'casa-3d', component: CasaAdaptadaComponent },
 
   { path: 'proyectos/labtic/3', loadComponent: () => import('./proyectos/labtic/terminales/terminales.component').then(m => m.TerminalesProyectoComponent) },
 

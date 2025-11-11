@@ -25,6 +25,10 @@ export class BannerComponent {
     {
       imagen: 'assets/img/belgrano.jpg', 
       ruta: '/belgrano'
+    },
+     {
+      imagen: 'assets/img/maqueta3d.png', 
+      ruta: '/casa-3d'
     }
   ];
 
