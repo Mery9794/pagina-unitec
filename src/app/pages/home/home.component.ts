@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   laboratorios = [
-    { nombre: 'EDETEC', logo: '', ruta: 'edetec', fondo: 'assets/logos/jy.png', descripcion: 'Desarrollos Tecnológicos' },
+    { nombre: 'EDETEC', logo: '', ruta: 'edetec', fondo: 'assets/logos/edetec-portada.jpg', descripcion: 'Desarrollos Tecnológicos' },
     { nombre: 'INFOTEC', logo: '', ruta: 'infotec', fondo: 'assets/img/InfoTEC1.jpg', descripcion: 'Desarrollo TIC e informática aplicada' },
     { nombre: '', logo: '', ruta: 'arduino', fondo: 'assets/img/Arduino1.png', descripcion: 'Adaptaciones electrónicas basadas en Arduino' },
     { nombre: '', logo: 'assets/logos/logo-tecnicas3d1.png', ruta: 'adaptaciones', fondo: 'assets/img/3D.1.jpg', descripcion: 'Diseño e impresión en 3D' },
